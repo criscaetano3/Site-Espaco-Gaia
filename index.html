@@ -1,26 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <style></style>
   <body>
     <header>
       <div class="container">
-        <a href="#"><img src="imagem/Observatorio branca.png" alt="logo" /></a>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Projetos</a></li>
+        <div class="logo">
+          <img src="imagem/Observatorio branca.png" alt="logo Gaia" />
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#projeto">Projetos</a></li>
             <li><a href="#">Como Ajudar</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <button><a href="#">Doe agora</a></button>
+        <div class="hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#" class="btn-doar">Doe agora</a>
       </div>
     </header>
+    <section id="inicio" class="hero">
+      <div class="hero-container">
+        <h1>
+          Associação Espaço Gaia <br />
+          "Construindo pesquisas e tecnologias para o bem viver integral de
+          pessoas com útero e suas crias."
+        </h1>
+
+        <p>
+          Um Espaço de acolhimento, cuidado, educação, saúde, e transformação
+          dentro do Complexo do Salgueiro.
+        </p>
+
+        <div class="hero-botoes">
+          <a href="#" class="btn-hero1">Doe agora</a>
+          <a href="#" class="btn-hero2">Seja Voluntário</a>
+          <a href="#" class="btn-hero3">Conheça nossos Projetos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">sobre nós</section>
+    <section id="projeto">projetos</section>
+    <section id="contato">contato</section>
+
+    <script src="script.js"></script>
   </body>
 </html>

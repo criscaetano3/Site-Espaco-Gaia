@@ -4,7 +4,248 @@
   box-sizing: border-box;
 }
 
-a {
+body {
+  padding-top: 80px;
+}
+
+header {
+  background: #b65a1e;
+  padding: 0px 0;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+header.scroll {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* logo */
+.logo {
+  height: 80px;
+  width: 150px;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+/* container do header */
+.container {
+  max-width: 1200px;
+  height: 80px;
+  margin: auto;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* menu opções */
+.menu {
+  display: flex;
+  gap: 100px;
+  list-style: none;
+}
+
+/* menu links */
+.menu a {
   text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.menu a.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+/* Botão */
+.btn-doar {
+  background: #007009;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/*Style hamburguer */
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+.hamburguer span {
   display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.hamburguer.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburguer.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* style hero */
+.hero {
+  height: 100vh;
+  background: url("imagem/projetoGaia.png") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+/* camada escura na imagem */
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.81);
+}
+
+/* conteudo acima da imagem */
+.hero-container {
+  position: relative;
+  max-width: 700px;
+  padding: 0 0 0 50px;
+  gap: 5rem;
+}
+
+/* Texo hero */
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.hero p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0 0 20px 0;
+}
+
+/* botão hero */
+.hero-botoes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btn-hero1 {
+  background: #bb0808;
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3;
+}
+
+.btn-hero2 {
+  background: #275d02;
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3;
+}
+
+.btn-hero3 {
+  background: #ff2600;
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3;
+}
+
+.btn-hero1:hover {
+  background: #1500ff;
+}
+
+.btn-hero2:hover {
+  background: #1500ff;
+}
+
+.btn-hero3:hover {
+  background: #1500ff;
+}
+
+/* Style para celular */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 70px;
+    background: white;
+    padding: 20px;
+  }
+  .menu.ativo {
+    display: flex;
+  }
+  .hamburguer {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-botoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-hero1 {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .btn-hero2 {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .btn-hero3 {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
 }
