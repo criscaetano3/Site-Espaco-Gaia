@@ -19,12 +19,6 @@ header {
   transition: 0.3s;
 }
 
-header.scroll {
-  background: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-}
-
 /* logo */
 .logo {
   height: 80px;
@@ -200,6 +194,74 @@ header.scroll {
   background: #1500ff;
 }
 
+/* Pagina Sobre */
+.sobre {
+  padding: 20px 0;
+  background: #ffeed3;
+}
+
+.container-sobre {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.sobre-text h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.sobre-text p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn-sobre {
+  //display: inline-block;
+  margin-top: 10px;
+  background: #ff2600;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3;
+}
+
+.btn-sobre:hover {
+  background: #1500ff;
+}
+.img-sobre img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sobre-text h2::after {
+  content: "";
+  display: block;
+  width: 135px;
+  height: 4px;
+  background: #b65a1e;
+  margin-top: 10px;
+}
+
+.sobre-dados {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.sobre-dados h3 {
+  color: #b65a1e;
+}
+
 /* Style para celular */
 @media (max-width: 768px) {
   .menu {
@@ -247,5 +309,18 @@ header.scroll {
     width: 100%;
     max-width: 300px;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .container-sobre {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sobre-dados {
+      justify-content: center;
+    }
   }
 }
