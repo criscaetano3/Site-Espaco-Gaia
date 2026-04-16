@@ -44,7 +44,7 @@ header {
 /* menu opções */
 .menu {
   display: flex;
-  gap: 100px;
+  gap: 5rem;
   list-style: none;
 }
 
@@ -52,7 +52,7 @@ header {
 .menu a {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: 15px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -67,6 +67,7 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /*Style hamburguer */
@@ -97,7 +98,7 @@ header {
 
 /* style hero */
 .hero {
-  height: 100vh;
+  height: 650px;
   background: url("imagem/projetoGaia.png") no-repeat center/cover;
   display: flex;
   align-items: center;
@@ -196,9 +197,9 @@ header {
 
 /* Pagina Sobre */
 .sobre {
-  padding: 0;
   background: #ffffff;
   display: flex;
+  margin-top: 5px;
 }
 
 .container-sobre {
@@ -277,7 +278,7 @@ header {
 
 /* style projetos */
 .projetos {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
   background: #ffffff;
 }
@@ -425,10 +426,189 @@ header {
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn-ver-mais:hover {
   background: #990000;
+}
+
+/* style como ajudar */
+.ajudar {
+  padding: 80px 0;
+  background: url("imagem/cestaBasica.png") center/cover no-repeat;
+  position: relative;
+  text-align: center;
+  height: 650px;
+}
+
+.ajudar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.ajudar .container-ajudar {
+  position: relative;
+  z-index: 1;
+}
+
+.ajudar h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.ajudar-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.ajudar-card p {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.ajudar-card h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.ajudar-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ajudar {
+  display: inline-block;
+  margin-top: 15px;
+  background: #bb0808;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* style depoimento */
+.depoimentos {
+  padding: 80px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.depoimentos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.depoimentos-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.depoimento-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.depoimento-card p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.depoimento-card h4 {
+  color: #ff2600;
+}
+
+.container-depoimento h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* style contato */
+.contato {
+  padding: 80px 0;
+  background: #b65a1e;
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.contato-content {
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+}
+
+.logo-contato img {
+  width: 200px;
+  height: 100px;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-contato textarea {
+  height: 120px;
+}
+
+.form-contato button {
+  background: #ff2600;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-contato button:hover {
+  background: #990000;
+}
+
+.info-contato {
+  max-width: 300px;
+}
+
+.info-contato h3 {
+  margin-bottom: 10px;
+}
+
+.info-contato p {
+  margin-bottom: 8px;
 }
 
 /* Style para celular */
@@ -487,6 +667,10 @@ header {
     gap: 10px;
   }
 
+  .sobre-text h2::after {
+    display: none;
+  }
+
   .impact {
     align-items: center;
     gap: 20px;
@@ -524,10 +708,6 @@ header {
     text-align: center;
   }
 
-  .card img {
-    height: 150px;
-  }
-
   .btn-projeto {
     width: 30%;
     text-align: center;
@@ -536,5 +716,45 @@ header {
   .btn-ver-mais {
     width: 50%;
     text-align: center;
+  }
+
+  /* como ajudar */
+  .ajudar {
+    padding: 20px 0 0 0;
+  }
+
+  .ajudar h2 {
+    margin-bottom: 50px;
+  }
+
+  .ajudar-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .ajudar-card {
+    width: 90%;
+  }
+
+  /* depoimento */
+  .depoimentos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .depoimento-card {
+    width: 90%;
+  }
+
+  /* contato */
+  .contato-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-contato,
+  .info-contato {
+    width: 90%;
   }
 }
