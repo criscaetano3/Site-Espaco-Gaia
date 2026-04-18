@@ -628,49 +628,25 @@ header {
   height: 20px;
 }
 
-/* footer */
-.footer {
-  background: #1a1a1a;
-  color: white;
-  padding: 40px 0 20px;
-}
-
-.footer-content {
+.rede {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.footer h3,
-.footer h4 {
-  margin-bottom: 10px;
+.logo-rede h2 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 20px;
 }
 
-.footer a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 0.9rem;
+.rede-sociais img {
+  width: 40px;
+  height: 40px;
 }
 
-.footer a:hover {
-  color: var(--laranja);
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer li {
-  margin-bottom: 5px;
-}
-
-.footer-bottom {
-  margin-top: 20px;
+.footer {
   text-align: center;
-  font-size: 0.8rem;
-  color: #aaa;
+  margin-top: 50px;
 }
 
 /* Style para celular */
@@ -821,10 +797,11 @@ header {
     width: 90%;
   }
 
-  /* footer */
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
+  .footer {
     text-align: center;
+  }
+
+  .logo-rede {
+    padding: 20px;
   }
 }
