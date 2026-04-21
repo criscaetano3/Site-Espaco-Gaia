@@ -17,30 +17,25 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Ativar o scroll
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".menu a");
+// Animar
+const elementos = document.querySelectorAll(".animar");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo"); // aparece
+      } else {
+        entry.target.classList.remove("ativo"); // some
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-
-    if (scrollY >= sectionTop - 100) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
+elementos.forEach((el) => observer.observe(el));
 
 // botão saiba mais
 const botoes = document.querySelectorAll(".btn-projeto");
