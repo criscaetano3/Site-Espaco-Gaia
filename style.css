@@ -555,6 +555,14 @@ header {
   height: 100px;
 }
 
+.logo-footer p {
+  font-size: 15px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0 0 0 20px;
+}
+
 .info-footer {
   max-width: 300px;
 }
@@ -755,14 +763,13 @@ header {
   }
 
   /* contato */
-  .contato-content {
+  .footer-content {
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: 2rem;
   }
 
-  .form-contato,
-  .info-contato {
+  .info-footer {
     width: 90%;
   }
 
