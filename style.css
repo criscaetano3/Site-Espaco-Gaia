@@ -198,7 +198,7 @@ header {
 /* Pagina Sobre */
 .sobre {
   background: #ffffff;
-  display: flex;
+  display: block;
   margin-top: 5px;
 }
 
@@ -234,6 +234,8 @@ header {
   text-decoration: none;
   transition: 0.3;
   margin-left: 10px;
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-sobre:hover {
@@ -244,14 +246,6 @@ header {
   border-radius: 10px;
 }
 
-.sobre-text h2::after {
-  content: "";
-  display: block;
-  width: 138px;
-  height: 4px;
-  background: #b65a1e;
-  margin-top: 3px;
-}
 /* impacto + sobre */
 .impact {
   background: #ffeed3;
@@ -276,11 +270,16 @@ header {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.btn {
+  text-align: center;
+  padding: 20px;
+}
 /* style projetos */
 .projetos {
   padding: 20px 0;
   text-align: center;
   background: #ffffff;
+  width: 100%;
 }
 
 .projetos h2 {
@@ -290,20 +289,9 @@ header {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* linha abaixo do titulo */
-.projetos h2::after {
-  content: "";
-  display: block;
-  width: 228px;
-  height: 4px;
-  background: #b65a1e;
-  margin-top: 3px;
-  margin-left: 640px;
-}
-
 .cards {
   display: flex;
-  gap: 5rem;
+  gap: 2rem;
   padding: 20px;
   justify-content: center;
 }
@@ -617,6 +605,18 @@ header {
   margin-top: 50px;
 }
 
+/* animar */
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.animar.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Style para celular */
 @media (max-width: 768px) {
   .menu {
@@ -631,6 +631,7 @@ header {
   }
   .menu.ativo {
     display: flex;
+    background: #b65a1e;
   }
   .hamburguer {
     display: block;
