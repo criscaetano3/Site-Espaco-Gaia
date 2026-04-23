@@ -10,7 +10,7 @@ body {
 header {
   background: #b65a1e;
   padding: 0;
-  position: fixed;
+  position: relative;
   height: 80px;
   width: 100%;
   top: 0;
@@ -742,10 +742,13 @@ header {
 @media (max-width: 768px) {
   .container {
     padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   /* logo header */
-  .logo-img {
+  .logo img {
     width: 120px;
   }
 
@@ -770,15 +773,16 @@ header {
   }
   .hamburguer {
     display: block;
-    flex-direction: column;
     cursor: pointer;
   }
 
   .hamburguer span {
     width: 22px;
+    background: white;
     display: block;
   }
 
+  /* inicio */
   .hero h1 {
     font-size: 1.8rem;
   }
