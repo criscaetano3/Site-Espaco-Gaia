@@ -9,7 +9,7 @@ body {
 }
 header {
   background: #b65a1e;
-  padding: 0px 0;
+  padding: 0;
   position: fixed;
   height: 80px;
   width: 100%;
@@ -724,8 +724,31 @@ header {
   color: white;
 }
 
+.section-faixa {
+  width: 100%;
+  height: 150px;
+}
+.faixa-logo {
+  width: 100%;
+  height: 150px;
+}
+
+.faixa-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Style para celular */
 @media (max-width: 768px) {
+  .container {
+    padding: 10px 15px;
+  }
+
+  /* logo header */
+  .logo-img {
+    width: 120px;
+  }
+
   .menu {
     display: none;
     flex-direction: column;
@@ -739,12 +762,20 @@ header {
 
   .btn-doar {
     padding: 6px 10px;
+    font-size: 12px;
   }
   .menu.ativo {
     display: flex;
     background: #b65a1e;
   }
   .hamburguer {
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburguer span {
+    width: 22px;
     display: block;
   }
 
@@ -931,5 +962,16 @@ header {
 
   .text p {
     padding: 0 0 10px;
+  }
+  /* faixa decorativa */
+  .section-faixa {
+    height: 100px;
+  }
+  .faixa-logo {
+    height: 100px;
+  }
+  .faixa-logo img {
+    width: 100%;
+    height: 100%;
   }
 }
