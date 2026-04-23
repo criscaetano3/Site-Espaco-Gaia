@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  padding-top: 80px;
-}
-
 header {
   background: #b65a1e;
   padding: 0px 0;
@@ -51,7 +47,7 @@ header {
 /* menu links */
 .menu a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 15px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -80,7 +76,7 @@ header {
   display: block;
   width: 25px;
   height: 3px;
-  background: black;
+  background: white;
   margin: 5px 0;
   transition: 0.3s;
 }
@@ -736,6 +732,10 @@ header {
     top: 70px;
     background: white;
     padding: 20px;
+  }
+
+  .btn-doar {
+    padding: 6px 10px;
   }
   .menu.ativo {
     display: flex;
