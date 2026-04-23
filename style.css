@@ -60,16 +60,17 @@ header {
   color: white;
   border-bottom: 2px solid white;
 }
+
 /* Botão */
 .btn-doar {
-  background: #007009;
-  color: white;
+  background: white;
+  color: #d06800;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 /*Style hamburguer */
 .hamburguer {
   display: none;
@@ -540,7 +541,7 @@ header {
 
 .footer h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -597,6 +598,10 @@ header {
   gap: 1rem;
 }
 
+.footer-rede {
+  margin-bottom: 5px;
+}
+
 .logo-rede h2 {
   margin: 0;
   padding: 0 0 10px 0;
@@ -623,6 +628,101 @@ header {
 .animar.ativo {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Página Sobre */
+.sobre-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.organizacao {
+  padding: 60px 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.text h2 {
+  font-size: 30px;
+  color: #b65a1e;
+}
+.text p {
+  color: #b65a1e;
+  font-size: 20px;
+}
+
+.imagem-pag {
+  text-align: center;
+}
+
+.imagem-pag img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  border: 5px solid #b65a1e;
+
+  margin-top: 100px;
+}
+
+.historia-content {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.historia-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.missao-cont {
+  background: #bc8100;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.visao-cont {
+  background: #830000;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.valores-cont {
+  background: #258900;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
+.missao-cont:hover,
+.visao-cont:hover,
+.valores-cont:hover {
+  transform: translateY(-5px);
+}
+
+.missao-cont h2,
+.visao-cont h2,
+.valores-cont h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.missao-cont p,
+.visao-cont p,
+.valores-cont p {
+  color: white;
 }
 
 /* Style para celular */
@@ -762,7 +862,7 @@ header {
     width: 90%;
   }
 
-  /* contato */
+  /* footer */
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -791,5 +891,42 @@ header {
   .animar.ativo {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia-content {
+    padding: 0 10px;
+  }
+
+  .imagem-pag img {
+    max-width: 100%;
+  }
+
+  .container,
+  .container-footer {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  /* pagina sobre */
+  .organizacao {
+    display: block;
+  }
+
+  .imagem-pag img {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .text h2 {
+    padding: 10px;
+  }
+
+  .text p {
+    padding: 0 0 10px;
   }
 }
