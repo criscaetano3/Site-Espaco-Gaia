@@ -4,7 +4,21 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+@font-face {
+  font-family: "TanBuste";
+  src: url("fonts/TANBUSTER-fonts.otf") format("opentype");
+}
 
+@font-face {
+  font-family: "AristotelicaPro";
+  src: url("fonts/Zetafonts - Aristotelica Pro Text Extralight.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "TanParadiso";
+  src: url("fonts/TAN-PARADISO.ttf") format("opentype");
+}
 body {
   width: 100%;
   overflow-x: hidden;
@@ -54,25 +68,20 @@ header {
 /* menu links */
 .menu a {
   text-decoration: none;
-  color: white;
+  color: #ebddcc;
   font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.menu a.active {
-  color: white;
-  border-bottom: 2px solid white;
+  font-family: "AristotelicaPro", sans-serif;
 }
 
 /* Botão */
 .btn-doar {
-  background: white;
-  color: #d06800;
+  background: #ebddcc;
+  color: #642435;
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "AristotelicaPro";
 }
 /*Style hamburguer */
 .hamburguer {
@@ -106,7 +115,7 @@ header {
   background: url("imagem/projetoGaia.png") no-repeat center/cover;
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: center;
   position: relative;
   width: 100%;
 }
@@ -122,24 +131,28 @@ header {
 /* conteudo acima da imagem */
 .hero-container {
   position: relative;
-  max-width: 700px;
-  padding: 0 0 0 50px;
+  padding: 0;
   gap: 5rem;
+  text-align: center;
 }
 
 /* Texo hero */
-.hero h1 {
-  font-size: 30px;
+
+.hero-container h1 {
+  font-size: 50px;
   margin-bottom: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "TanBuste", sans-serif;
+  color: #edbf8d;
+}
+.hero-container .h2 {
+  font-family: "TanBuste";
 }
 .hero p {
   margin-bottom: 20px;
   font-size: 20px;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "AristotelicaPro";
   padding: 0 0 20px 0;
+  color: #ebddcc;
 }
 
 /* botão hero */
@@ -149,12 +162,10 @@ header {
   justify-content: center;
   margin-top: 20px;
 }
-.btn-hero1 {
-  background: #bb0808;
-  color: white;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+.btn-hero {
+  background: #455543;
+  color: #ebddcc;
+  font-family: "AristotelicaPro";
   padding: 12px 25px;
   border-radius: 6px;
   text-decoration: none;
@@ -162,42 +173,8 @@ header {
   transition: 0.3;
 }
 
-.btn-hero2 {
-  background: #275d02;
-  color: white;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3;
-}
-
-.btn-hero3 {
-  background: #ff2600;
-  color: white;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3;
-}
-
-.btn-hero1:hover {
-  background: #1500ff;
-}
-
-.btn-hero2:hover {
-  background: #1500ff;
-}
-
-.btn-hero3:hover {
-  background: #1500ff;
+.btn-hero:hover {
+  background: #b65a1e;
 }
 
 /* Pagina Sobre */
@@ -205,10 +182,10 @@ header {
   background: #ffffff;
   display: block;
   margin-top: 5px;
+  justify-content: center;
 }
 
 .container-sobre {
-  display: flex;
   align-items: center;
   gap: 40px;
 }
@@ -216,17 +193,10 @@ header {
 .sobre-text h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "TanBuste";
   margin-left: 10px;
-}
-
-.sobre-text p {
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-left: 10px;
+  color: #642435;
+  justify-content: center;
 }
 
 .btn-sobre {
@@ -246,35 +216,41 @@ header {
 .btn-sobre:hover {
   background: #1500ff;
 }
-.img-sobre img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
 
-/* impacto + sobre */
+/* impacto*/
 .impact {
-  background: #ffeed3;
   display: flex;
-  padding: 40px 0;
-  border-radius: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   gap: 10rem;
   margin-top: 20px;
   justify-content: center;
-  height: 120px;
+}
+
+.dados {
+  background: #ebddcc;
+  color: #a34c1b;
+  border-radius: 10px;
+  width: 300px;
+  height: 270px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0 30px 0;
 }
 
 .impact h3 {
-  color: #b65a1e;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-.impact p {
+.dados p {
+  font-size: 20px;
+  font-family: "TanParadiso";
+  margin-bottom: 10px;
+}
+
+.dados .descricao {
+  font-family: "AristotelicaPro";
   font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn {
@@ -293,7 +269,8 @@ header {
   font-size: 30px;
   margin-bottom: 20px;
   margin-left: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #642435;
+  font-family: "TanBuste";
 }
 
 .cards {
@@ -315,15 +292,15 @@ header {
 }
 
 .cor1 {
-  background: #e00000cb;
+  background: #6e4c5b;
 }
 
 .cor2 {
-  background: #9e0091;
+  background: #1d3e30;
 }
 
 .cor3 {
-  background: #bc8100;
+  background: #a34c1b;
 }
 
 .cor4 {
@@ -345,11 +322,9 @@ header {
 
 .card h3 {
   margin: 10px 0 10px;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  color: white;
+  font-family: "TanParadiso";
+  font-size: 20px;
+  color: #ebddcc;
   text-align: center;
 }
 .card a {
@@ -374,15 +349,13 @@ header {
 }
 
 .oculto-p {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-family: "AristotelicaPro";
+  font-size: 18px;
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
   padding: 0 15px;
-  color: white;
+  color: #ebddcc;
   opacity: 0;
 }
 
@@ -390,6 +363,9 @@ header {
   max-height: 250px;
   margin-top: 10px;
   opacity: 1;
+}
+.card {
+  cursor: pointer;
 }
 
 .oculto {
@@ -400,24 +376,14 @@ header {
   display: block;
 }
 
-.btn-projeto {
-  display: inline-block;
-  margin-top: 0;
-  background: white;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
 .btn-ver-mais {
   display: inline-block;
   height: 35px;
   text-align: center;
   justify-content: center;
   padding: 10px 25px;
-  background: #d06800;
-  color: white;
+  background: #fb7c1f;
+  color: #ebddcc;
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
@@ -425,7 +391,7 @@ header {
 }
 
 .btn-ver-mais:hover {
-  background: #990000;
+  background: #642435;
 }
 
 /* style como ajudar */
@@ -455,8 +421,8 @@ header {
 .ajudar h2 {
   font-size: 30px;
   margin-bottom: 40px;
-  color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ebddcc;
+  font-family: "TanBuste";
 }
 
 .ajudar-cards {
@@ -468,19 +434,18 @@ header {
 }
 
 .ajudar-card p {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "AristotelicaPro";
   font-size: 12px;
   margin-top: 5px;
 }
 
 .ajudar-card h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "TanParadiso";
+  color: #642435;
 }
 
 .ajudar-card {
-  background: white;
+  background: #ebddcc;
   padding: 20px;
   border-radius: 10px;
   width: 280px;
@@ -490,12 +455,12 @@ header {
 .btn-ajudar {
   display: inline-block;
   margin-top: 15px;
-  background: #bb0808;
-  color: white;
+  background: #455543;
+  color: #ebddcc;
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "AristotelicaPro";
 }
 
 /* style depoimento */
@@ -508,7 +473,8 @@ header {
 .depoimentos h2 {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #000;
+  font-family: "TanBuste";
+  color: #642435;
 }
 
 .depoimentos-cards {
@@ -526,16 +492,16 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .depoimento-card p {
-  font-style: italic;
+  font-family: "AristotelicaPro";
   margin-bottom: 10px;
 }
 
 .depoimento-card h4 {
-  color: #ff2600;
+  color: #a34c1b;
 }
 
 .container-depoimento h2 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "TanBuste";
 }
 
 /* footer*/
@@ -548,7 +514,8 @@ header {
 .footer h2 {
   text-align: center;
   margin-bottom: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ebddcc;
+  font-family: "TanBuste";
 }
 
 .footer-content {
@@ -564,10 +531,9 @@ header {
 
 .logo-footer p {
   font-size: 15px;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 0 0 0 20px;
+  font-family: "TanParadiso";
+  color: #ebddcc;
 }
 
 .info-footer {
@@ -577,15 +543,12 @@ header {
 .info-footer h3 {
   margin-bottom: 10px;
   font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .info-footer p {
   margin-bottom: 8px;
   font-size: 15px;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "AristotelicaPro";
 }
 
 .footer-cont {
@@ -607,11 +570,15 @@ header {
 .footer-rede {
   margin-bottom: 5px;
 }
+.footer-rede p {
+  font-family: "AristotelicaPro";
+}
 
 .logo-rede h2 {
   margin: 0;
   padding: 0 0 10px 0;
   font-size: 20px;
+  font-family: "TanBuste";
 }
 
 .rede-sociais img {
@@ -651,10 +618,11 @@ header {
 
 .text h2 {
   font-size: 30px;
-  color: #b65a1e;
+  color: #642435;
+  font-family: "TanBuste";
 }
 .text p {
-  color: #b65a1e;
+  color: #1d3e30;
   font-size: 20px;
 }
 
@@ -682,8 +650,19 @@ header {
   font-size: 1rem;
 }
 
+.sobre-cont {
+  background: #d6c3a3;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
 .missao-cont {
-  background: #bc8100;
+  background: #ebddcc;
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -693,7 +672,7 @@ header {
   transition: 0.3s;
 }
 .visao-cont {
-  background: #830000;
+  background: #edbf8d;
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -703,7 +682,7 @@ header {
   transition: 0.3s;
 }
 .valores-cont {
-  background: #258900;
+  background: #b17253;
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -712,24 +691,34 @@ header {
   margin-right: auto;
   transition: 0.3s;
 }
-
+.sobre-cont:hover,
 .missao-cont:hover,
 .visao-cont:hover,
 .valores-cont:hover {
   transform: translateY(-5px);
 }
 
-.missao-cont h2,
-.visao-cont h2,
-.valores-cont h2 {
-  margin-bottom: 10px;
-  color: white;
+.sobre-cont h2 {
+  font-family: "TanParadiso";
+  color: #642435;
 }
-
+.missao-cont h2 {
+  color: #a34c1b;
+  font-family: "TanParadiso";
+}
+.visao-cont h2 {
+  color: #455543;
+  font-family: "TanParadiso";
+}
+.valores-cont h2 {
+  color: #ebddcc;
+  font-family: "TanParadiso";
+}
+.sobre-cont p,
 .missao-cont p,
 .visao-cont p,
 .valores-cont p {
-  color: white;
+  color: #000;
 }
 
 .section-faixa {
@@ -836,10 +825,16 @@ header {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    flex-direction: column;
   }
   .dados {
-    width: 100%;
-    padding: 20px;
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+  }
+  .dados img {
+    width: 200px;
+    height: 100px;
   }
 
   /* projetos  */
@@ -1084,6 +1079,11 @@ header {
     padding: 20px;
   }
 
+  .dados img {
+    width: 200px;
+    height: 100px;
+  }
+
   /* projetos  */
   .cards {
     flex-direction: column;
@@ -1324,6 +1324,11 @@ header {
   .dados {
     width: 100%;
     padding: 20px;
+  }
+
+  .dados img {
+    width: 200px;
+    height: 100px;
   }
 
   /* projetos  */

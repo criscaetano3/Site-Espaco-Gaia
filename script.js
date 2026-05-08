@@ -36,29 +36,12 @@ const observer = new IntersectionObserver(
 
 elementos.forEach((el) => observer.observe(el));
 
-// botão saiba mais
-const botoes = document.querySelectorAll(".btn-projeto");
+// card abrir mais
+const cards = document.querySelectorAll(".card");
 
-botoes.forEach((botao) => {
-  botao.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const cardAtual = this.closest(".card");
-    const todosCards = document.querySelectorAll(".card");
-
-    const jaEstaAtivo = cardAtual.classList.contains("ativo");
-
-    // fecha todos
-    todosCards.forEach((card) => {
-      card.classList.remove("ativo");
-      card.querySelector(".btn-projeto").textContent = "Saiba mais";
-    });
-
-    // se NÃO estava aberto → abre
-    if (!jaEstaAtivo) {
-      cardAtual.classList.add("ativo");
-      this.textContent = "Ver menos";
-    }
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("ativo");
   });
 });
 
