@@ -183,6 +183,7 @@ header {
   display: block;
   margin-top: 5px;
   justify-content: center;
+  padding: 0 0 20px 0;
 }
 
 .container-sobre {
@@ -733,6 +734,117 @@ header {
 .faixa-logo img {
   width: 100%;
   height: 100%;
+}
+
+/* Página Doação */
+/* hero */
+.hero-doacao {
+  padding: 10px 10px;
+}
+
+.container-doacao {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.text-doacao {
+  flex: 1;
+}
+
+.text-doacao span {
+  color: #b65a1e;
+  font-size: 20px;
+  font-family: "AristotelicaPro";
+  padding-bottom: 5px;
+}
+
+.text-doacao h1 {
+  font-size: 35px;
+  margin: 10px 0;
+  color: #642435;
+  font-family: "TanBuste";
+}
+
+.text-doacao p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: "TanBuste";
+  color: #000;
+}
+
+.text-doacao h3 {
+  color: #455543;
+  font-family: "AristotelicaPro";
+}
+
+.doacao-img {
+  flex: 1;
+}
+
+.doacao-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* PIX */
+
+.pix {
+  padding: 40px 0;
+}
+
+.pix-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.pix-box,
+.ajuda-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.pix-box h2,
+.ajuda-box h2 {
+  margin-bottom: 30px;
+  color: #2f422f;
+}
+
+.pix-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.pix-content img {
+  width: 220px;
+}
+
+.pix-info p {
+  margin-bottom: 20px;
+}
+
+.pix-info h4 {
+  color: #b65a1e;
+  margin-bottom: 10px;
+}
+
+.pix-chave {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.ajuda-item {
+  margin-bottom: 30px;
+}
+
+.ajuda-item h3 {
+  color: #b65a1e;
+  margin-bottom: 10px;
 }
 
 /* Style para celular */
