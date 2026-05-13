@@ -774,8 +774,13 @@ header {
 }
 
 .text-doacao h3 {
-  color: #455543;
+  color: #b65a1e;
   font-family: "AristotelicaPro";
+}
+
+.text-doacao h3 img {
+  height: 20px;
+  width: 20px;
 }
 
 .doacao-img {
@@ -809,7 +814,8 @@ header {
 .pix-box h2,
 .ajuda-box h2 {
   margin-bottom: 30px;
-  color: #2f422f;
+  color: #642435;
+  font-family: "tanParadiso";
 }
 
 .pix-content {
@@ -824,11 +830,13 @@ header {
 
 .pix-info p {
   margin-bottom: 20px;
+  font-family: "AristotelicaPro";
 }
 
 .pix-info h4 {
   color: #b65a1e;
   margin-bottom: 10px;
+  font-family: "AristotelicaPro";
 }
 
 .pix-chave {
@@ -836,15 +844,18 @@ header {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 15px;
+  font-family: "AristotelicaPro";
 }
 
 .ajuda-item {
   margin-bottom: 30px;
+  font-family: "AristotelicaPro";
 }
 
 .ajuda-item h3 {
   color: #b65a1e;
   margin-bottom: 10px;
+  font-family: "AristotelicaPro";
 }
 
 /* Style para celular */
