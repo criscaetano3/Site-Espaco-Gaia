@@ -935,7 +935,7 @@ header {
   min-height: 78vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("imagem/img-observatorio.jpeg") center/cover no-repeat;
+    url("imagem/observatorio=inicio.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
@@ -997,7 +997,7 @@ header {
 .sobre-observatorio {
   padding: 90px 0;
   background: #fff7ef;
-  height: 500px;
+  height: 600px;
 }
 
 .sobre-grid {
@@ -1030,9 +1030,9 @@ header {
   font-family: "AristotelicaPro";
 }
 
-.sobre-img img,
-.tecnologia-grid img {
-  width: 100%;
+.sobre-img img {
+  width: 500px;
+  height: 450px;
   border-radius: 22px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
@@ -1082,7 +1082,7 @@ header {
   color: #642435;
   margin-bottom: 14px;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 20px;
   font-family: "tanParadiso";
 }
 
@@ -1122,7 +1122,7 @@ header {
 
 .timeline-item h3 {
   color: #b65a1e;
-  font-size: 1.6rem;
+  font-size: 15px;
   margin-bottom: 10px;
   font-family: "tanParadiso";
 }
@@ -1161,7 +1161,7 @@ header {
 }
 
 .impacto-grid h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
   font-family: "tanParadiso";
 }
@@ -1190,7 +1190,7 @@ header {
   font-size: 2.5rem;
   color: #8b4a2b;
   margin-bottom: 40px;
-  font-family: "tanParadiso";
+  font-family: "tanBuste";
 }
 
 .galeria-swiper {
@@ -1287,11 +1287,9 @@ header {
 /* TECNOLOGIA SOCIAL */
 
 .tecnologia-social {
-  padding: 100px 0;
+  padding: 20px 0;
   background: #fff7ef;
-  position: relative;
-  z-index: 1;
-  clear: both;
+  height: 450px;
 }
 
 .tecnologia-grid {
@@ -1299,6 +1297,11 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.tecnologia-social .container img {
+  width: 300px;
+  height: 400px;
 }
 
 .tecnologia-social a {
@@ -1310,6 +1313,56 @@ header {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* reconhecimento */
+.reconhecimento {
+  width: 100%;
+  height: 400px;
+}
+.reconhecimento .reco-text h2 {
+  color: #b65a1e;
+  margin-bottom: 45px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "TanBuste";
+  text-align: center;
+  padding: 10px 0;
+}
+.reconhecimento .reco-text p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-family: "AristotelicaPro";
+  padding: 0 15px;
+}
+.reconhecimento .container-reco {
+  display: flex;
+  padding: 10px 10px;
+}
+.paragrafo {
+  width: 50%;
+  gap: 2rem;
+}
+.paragrafo .p {
+  font-size: 20px;
+}
+
+.reconhecimento .container-reco .container-img img {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+.img-p {
+  display: flex;
+  align-items: center;
+}
+.img-p p {
+  font-family: "ArostotelicaPro";
+  font-size: 20px;
+  margin-top: 30px;
 }
 
 /* CTA */
@@ -1742,6 +1795,191 @@ header {
   .btn-whats img {
     width: 20px;
   }
+  /* responsivo pagina observatório */
+  .hero-observatorio {
+    min-height: 100vh;
+    padding: 90px 20px 60px;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .hero-content span {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 18px 0;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .hero-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .hero-botoes a {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+  /* SOBRE - CELULAR */
+  .sobre-observatorio {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .sobre-texto span {
+    font-size: 12px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .sobre-texto p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .sobre-img img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .atuacao-cards,
+  .timeline-lista,
+  .impacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atuacao-card,
+  .timeline-item {
+    width: 100%;
+  }
+
+  .impacto-observatorio {
+    padding: 40px 20px;
+  }
+
+  .impacto-grid div {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+  }
+
+  .impacto-grid div:last-child {
+    border-bottom: none;
+  }
+
+  .galeria {
+    min-height: auto;
+    padding: 60px 0 80px;
+  }
+
+  .galeria h2 {
+    font-size: 2rem;
+  }
+
+  .galeria-swiper {
+    padding: 0 35px 45px;
+  }
+
+  .galeria-swiper .swiper-slide img {
+    width: 240px;
+    height: 170px;
+  }
+
+  .lightbox-img {
+    max-width: 85%;
+    max-height: 75%;
+  }
+
+  .fechar {
+    top: 20px;
+    right: 25px;
+    font-size: 40px;
+  }
+
+  .anterior,
+  .proximo {
+    font-size: 42px;
+    padding: 8px;
+  }
+
+  .anterior {
+    left: 10px;
+  }
+
+  .proximo {
+    right: 10px;
+  }
+
+  .tecnologia-social .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .reconhecimento .container-reco {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .paragrafo {
+    width: 100%;
+  }
+
+  .img-p {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .reconhecimento .container-reco .container-img img {
+    margin: auto;
+  }
+
+  .cta-observatorio .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-observatorio h2 {
+    font-size: 2rem;
+  }
+
+  .cta-observatorio a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
 }
 
 /*== 850px ==*/
@@ -2108,6 +2346,174 @@ header {
   .btn-whats {
     padding: 12px 22px;
     font-size: 1rem;
+  }
+
+  /* responsivo página observatório */
+
+  /* HERO */
+
+  .hero-observatorio {
+    min-height: 75vh;
+    padding: 60px 30px;
+  }
+
+  .hero-content {
+    margin-left: 4%;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-botoes {
+    flex-wrap: wrap;
+  }
+
+  /* SOBRE */
+
+  .sobre-observatorio {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .sobre-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* COMO ATUAMOS */
+
+  .atuacao {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .atuacao-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* TIMELINE */
+
+  .timeline {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .timeline-lista {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* IMPACTO */
+
+  .impacto-observatorio {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .impacto-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .impacto-grid div {
+    border-right: none;
+  }
+
+  /* GALERIA */
+
+  .galeria {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .galeria h2 {
+    font-size: 2.2rem;
+  }
+
+  .galeria-swiper {
+    max-width: 95%;
+    padding: 0 45px 45px;
+  }
+
+  .galeria-swiper .swiper-slide img {
+    width: 230px;
+    height: 170px;
+  }
+
+  /* LIGHTBOX */
+
+  .lightbox-img {
+    max-width: 85%;
+    max-height: 80%;
+  }
+
+  .anterior,
+  .proximo {
+    font-size: 50px;
+  }
+
+  /* TECNOLOGIA SOCIAL */
+
+  .tecnologia-social {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .tecnologia-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .tecnologia-social .container img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* RECONHECIMENTO */
+
+  .reconhecimento {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .container-reco {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .paragrafo {
+    width: 100%;
+  }
+
+  .img-p {
+    justify-content: center;
+  }
+
+  /* CTA */
+
+  .cta-observatorio .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-observatorio h2 {
+    font-size: 2.2rem;
   }
 }
 
@@ -2497,5 +2903,168 @@ header {
 
   .btn-whats img {
     width: 21px;
+  }
+
+  /* responsivo página oservatório */
+  /* HERO */
+
+  .hero-observatorio {
+    min-height: 75vh;
+    padding: 70px 40px;
+  }
+
+  .hero-content {
+    margin-left: 4%;
+    max-width: 650px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  /* SOBRE */
+
+  .sobre-observatorio {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .sobre-img img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+  }
+
+  /* COMO ATUAMOS */
+
+  .atuacao {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .atuacao-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  /* TIMELINE */
+
+  .timeline {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .timeline-lista {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* IMPACTO */
+
+  .impacto-observatorio {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .impacto-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .impacto-grid div {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .impacto-grid div:last-child {
+    border-right: none;
+  }
+
+  /* GALERIA */
+
+  .galeria {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .galeria-swiper {
+    max-width: 95%;
+    padding: 0 50px 50px;
+  }
+
+  .galeria-swiper .swiper-slide img {
+    width: 240px;
+    height: 170px;
+  }
+
+  /* LIGHTBOX */
+
+  .lightbox-img {
+    max-width: 85%;
+    max-height: 85%;
+  }
+
+  .anterior,
+  .proximo {
+    font-size: 55px;
+  }
+
+  /* TECNOLOGIA SOCIAL */
+
+  .tecnologia-social {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .tecnologia-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .tecnologia-social .container img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* RECONHECIMENTO */
+
+  .reconhecimento {
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .container-reco {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .paragrafo {
+    width: 60%;
+  }
+
+  .container-img {
+    width: 40%;
+  }
+
+  /* CTA */
+
+  .cta-observatorio .container {
+    gap: 20px;
+  }
+
+  .cta-observatorio h2 {
+    font-size: 2.2rem;
   }
 }
