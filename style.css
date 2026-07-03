@@ -932,19 +932,22 @@ header {
 /* style pagina observatório Itaoca */
 
 .hero-observatorio {
-  min-height: 78vh;
+  min-height: 90vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("imagem/observatorio=inicio.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   color: white;
 }
 
 .hero-content {
   max-width: 760px;
-  margin-left: 8%;
+  margin: 0 auto;
+  
 }
 
 .hero-content span {
@@ -995,9 +998,9 @@ header {
 /* SOBRE */
 
 .sobre-observatorio {
-  padding: 90px 0;
+  padding: 50px 0;
   background: #fff7ef;
-  height: 600px;
+  min-height: 100vh;
 }
 
 .sobre-grid {
@@ -1005,6 +1008,7 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 70px;
   align-items: center;
+  padding: 0 40px;
 }
 
 .sobre-texto span,
@@ -1040,13 +1044,13 @@ header {
 /* COMO ATUAMOS */
 
 .atuacao {
-  padding: 30px 0;
+  padding: 50px 20px;
   background: #f8f1e8;
   text-align: center;
-  height: 350px;
+  min-height: 350px;
 }
 
-.atuacao .container {
+.atuacao .contai, .conta {
   display: block;
 }
 
@@ -1054,7 +1058,7 @@ header {
 .timeline h2,
 .galeria h2 {
   color: #b65a1e;
-  margin-bottom: 45px;
+  margin-bottom: 10px;
   font-size: 2rem;
   text-transform: uppercase;
   font-family: "TanBuste";
@@ -1063,12 +1067,12 @@ header {
 .atuacao-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 15px;
 }
 
 .atuacao-card {
   background: #fffaf5;
-  padding: 35px 24px;
+  padding: 15px 24px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
@@ -1095,25 +1099,26 @@ header {
 /* TIMELINE */
 
 .timeline {
-  padding: 30px 0;
+  padding: 50px 20px;
   background: #fff7ef;
   text-align: center;
-  height: 410px;
+  min-height: 350px;
 }
+
 .timeline .container {
   display: grid;
+  justify-content: center;
 }
 
 .timeline-lista {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-  position: relative;
+  gap: 15px;
 }
 
 .timeline-item {
   background: #fff;
-  padding: 25px;
+  padding: 15px;
   border-radius: 18px;
   text-align: center;
   border-top: 5px solid #b65a1e;
@@ -1139,10 +1144,11 @@ header {
   background: #ebddcc;
   padding: 60px 0;
   color: #a34c1b;
-  overflow: hidden;
+  min-height: 114px;
+  align-items: center;
+  text-align: center;
   margin-bottom: 0;
   padding: 20px 0;
-  height: 114px;
 }
 
 .impacto-grid {
@@ -1174,7 +1180,7 @@ header {
 /* GALERIA */
 
 .galeria {
-  min-height: 500px;
+  min-height: 400px;
   padding: 80px 0 120px;
   background: #f8f1e8;
   position: relative;
@@ -1289,19 +1295,38 @@ header {
 .tecnologia-social {
   padding: 20px 0;
   background: #fff7ef;
-  height: 450px;
+  min-height: 90vh;
 }
 
 .tecnologia-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
 }
 
-.tecnologia-social .container img {
-  width: 300px;
-  height: 400px;
+.tecnologia-grid .con {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.a {
+  width: 100%;
+  text-align: center;
+}
+
+.tecnologia-social .img-tec{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.tecnologia-social .img-tec img {
+  width: 400px;
+  height: 500px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  text align: center;
 }
 
 .tecnologia-social a {
@@ -1317,8 +1342,8 @@ header {
 
 /* reconhecimento */
 .reconhecimento {
-  width: 100%;
-  height: 400px;
+  min-width: 100%;
+  min-height: 500px;
 }
 .reconhecimento .reco-text h2 {
   color: #b65a1e;
@@ -1327,7 +1352,7 @@ header {
   text-transform: uppercase;
   font-family: "TanBuste";
   text-align: center;
-  padding: 10px 0;
+  padding: 40px 0;
 }
 .reconhecimento .reco-text p {
   line-height: 1.8;
@@ -1370,7 +1395,8 @@ header {
 .cta-observatorio {
   background: linear-gradient(135deg, #b65a1e, #642435);
   color: white;
-  padding: 70px 0;
+  padding: 60px 0;
+  min-height: 200px;
 }
 
 .cta-observatorio .container {
@@ -1845,36 +1871,37 @@ header {
   }
   /* SOBRE - CELULAR */
   .sobre-observatorio {
-    height: auto;
-    padding: 60px 20px;
+    max-height: 400px;
+    padding: 30px 20px;
   }
 
   .sobre-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
 
-  .sobre-texto span {
-    font-size: 12px;
+  .sobre-texto {
+    width: 100%;
+    text-align: center;
   }
 
   .sobre-texto h2 {
     font-size: 2rem;
-    line-height: 1.2;
   }
 
   .sobre-texto p {
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 1rem;
   }
 
   .sobre-img img {
-    width: 100%;
-    max-width: 360px;
+    width: 80%;
+    max-width: 340px;
     height: auto;
-    margin: 0 auto;
   }
+
+  /* section atuação */
   .atuacao-cards,
   .timeline-lista,
   .impacto-grid {
@@ -1884,70 +1911,127 @@ header {
   .atuacao-card,
   .timeline-item {
     width: 100%;
+    height: auto;
   }
 
+  /* Trajetória */
+  .timeline-lista {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+  }
+  .timeline .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* IMPACTO - CELULAR */
   .impacto-observatorio {
-    padding: 40px 20px;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 50px 20px;
+    background: #ebddcc;
+    overflow: visible;
+    display: block;
+  }
+
+  .impacto-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
   }
 
   .impacto-grid div {
+    width: 100%;
+    padding: 20px 0;
     border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 20px;
+    border-bottom: 1px solid #c7b6a4;
   }
 
   .impacto-grid div:last-child {
     border-bottom: none;
   }
 
+  .impacto-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .impacto-grid p {
+    font-size: 1rem;
+  }
+
+  /* galeria */
+  /* GALERIA */
+
   .galeria {
-    min-height: auto;
-    padding: 60px 0 80px;
+    padding: 50px 15px;
   }
 
   .galeria h2 {
     font-size: 2rem;
+    margin-bottom: 25px;
   }
 
   .galeria-swiper {
-    padding: 0 35px 45px;
+    padding: 0 35px;
   }
 
   .galeria-swiper .swiper-slide img {
-    width: 240px;
-    height: 170px;
+    width: 220px;
+    height: 150px;
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #b65a1e;
+    transform: scale(0.7);
+  }
   .lightbox-img {
-    max-width: 85%;
-    max-height: 75%;
+    max-width: 90%;
+    max-height: 80%;
   }
 
-  .fechar {
-    top: 20px;
-    right: 25px;
-    font-size: 40px;
+  /* tecnologia social */
+  .tecnologia-social {
+    padding: 60px 20px;
   }
 
-  .anterior,
-  .proximo {
-    font-size: 42px;
-    padding: 8px;
-  }
-
-  .anterior {
-    left: 10px;
-  }
-
-  .proximo {
-    right: 10px;
+  .tecnologia-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
   }
 
   .tecnologia-social .container img {
     width: 100%;
+    max-width: 280px;
     height: auto;
+    margin: 0 auto;
   }
 
+  .tecnologia-social h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .tecnologia-social p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .tecnologia-social a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* reconhecimento */
   .reconhecimento .container-reco {
     flex-direction: column;
     text-align: center;
@@ -1966,20 +2050,38 @@ header {
     margin: auto;
   }
 
-  .cta-observatorio .container {
-    flex-direction: column;
-    text-align: center;
-  }
+  .cta-observatorio {
+  padding: 20px 20px;
+  text-align: center;
+  min-height: 300px;
+}
 
-  .cta-observatorio h2 {
-    font-size: 2rem;
-  }
+.cta-observatorio .container {
+  flex-direction: column;
+  gap: 30px;
+}
 
-  .cta-observatorio a {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-  }
+.cta-observatorio h2 {
+  font-size: 2rem;
+}
+
+.cta-observatorio p {
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.cta-observatorio div:last-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cta-observatorio a {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
 }
 
 /*== 850px ==*/
@@ -2350,150 +2452,228 @@ header {
 
   /* responsivo página observatório */
 
-  /* HERO */
-
   .hero-observatorio {
-    min-height: 75vh;
-    padding: 60px 30px;
+    min-height: 85vh;
+    padding: 80px 40px 60px;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    text-align: center;
   }
 
   .hero-content {
-    margin-left: 4%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero-content span {
+    font-size: 13px;
+    letter-spacing: 4px;
   }
 
   .hero-content h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 20px 0;
   }
 
   .hero-content p {
     font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 100%;
   }
 
   .hero-botoes {
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
   }
 
-  /* SOBRE */
+  .hero-botoes a {
+    max-width: 300px;
+    padding: 14px 22px;
+    text-align: center;
+  }
 
   .sobre-observatorio {
-    height: auto;
-    padding: 70px 0;
+    padding: 50px 30px;
   }
 
   .sobre-grid {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 35px;
+    align-items: center;
     text-align: center;
-    gap: 40px;
+  }
+
+  .sobre-texto {
+    width: 100%;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .sobre-img img {
-    width: 100%;
-    max-width: 500px;
+    width: 70%;
+    max-width: 420px;
     height: auto;
+    margin: 0 auto;
   }
 
-  /* COMO ATUAMOS */
-
   .atuacao {
-    height: auto;
-    padding: 60px 0;
+    padding: 60px 30px;
   }
 
   .atuacao-cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
   }
 
-  /* TIMELINE */
+  .atuacao-card {
+    width: 100%;
+    height: auto;
+  }
 
   .timeline {
-    height: auto;
-    padding: 60px 0;
+    padding: 60px 30px;
+    min-height: auto;
+  }
+
+  .timeline .container {
+    width: 100%;
+    display: block;
+    padding: 0;
   }
 
   .timeline-lista {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 20px;
   }
 
-  /* IMPACTO */
+  .timeline-item {
+    width: 100%;
+    height: auto;
+  }
 
   .impacto-observatorio {
+    width: 100%;
     height: auto;
-    padding: 40px 20px;
+    min-height: auto;
+    padding: 50px 30px;
+    background: #ebddcc;
+    overflow: visible;
+    display: block;
   }
 
   .impacto-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    width: 100%;
   }
 
   .impacto-grid div {
+    width: 100%;
+    padding: 20px 0;
     border-right: none;
+    border-bottom: 1px solid #c7b6a4;
   }
 
-  /* GALERIA */
+  .impacto-grid div:last-child,
+  .impacto-grid div:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .impacto-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .impacto-grid p {
+    font-size: 1rem;
+  }
 
   .galeria {
-    min-height: auto;
-    padding: 70px 0;
+    padding: 60px 30px 80px;
   }
 
   .galeria h2 {
     font-size: 2.2rem;
+    margin-bottom: 30px;
   }
 
   .galeria-swiper {
-    max-width: 95%;
-    padding: 0 45px 45px;
+    padding: 0 45px;
   }
 
   .galeria-swiper .swiper-slide img {
-    width: 230px;
-    height: 170px;
+    width: 240px;
+    height: 165px;
   }
 
-  /* LIGHTBOX */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #b65a1e;
+    transform: scale(0.8);
+  }
 
   .lightbox-img {
-    max-width: 85%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 85%;
   }
-
-  .anterior,
-  .proximo {
-    font-size: 50px;
-  }
-
-  /* TECNOLOGIA SOCIAL */
 
   .tecnologia-social {
-    height: auto;
-    padding: 70px 0;
+    padding: 70px 30px;
   }
 
   .tecnologia-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 40px;
     text-align: center;
   }
 
   .tecnologia-social .container img {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     height: auto;
+    margin: 0 auto;
   }
 
-  /* RECONHECIMENTO */
+  .tecnologia-social h2 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  .tecnologia-social p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .tecnologia-social a {
+    max-width: 300px;
+    text-align: center;
+  }
 
   .reconhecimento {
-    height: auto;
-    padding: 60px 0;
+    padding: 70px 30px;
   }
 
-  .container-reco {
+  .reconhecimento .container-reco {
     flex-direction: column;
+    text-align: center;
     gap: 30px;
   }
 
@@ -2503,18 +2683,44 @@ header {
 
   .img-p {
     justify-content: center;
+    flex-direction: row;
   }
 
-  /* CTA */
+  .reconhecimento .container-reco .container-img img {
+    margin: auto;
+  }
 
-  .cta-observatorio .container {
-    flex-direction: column;
+  .cta-observatorio {
+    padding: 60px 30px;
     text-align: center;
   }
 
-  .cta-observatorio h2 {
-    font-size: 2.2rem;
+  .cta-observatorio .container {
+    flex-direction: column;
+    gap: 30px;
   }
+
+  .cta-observatorio h2 {
+    font-size: 2.3rem;
+  }
+
+  .cta-observatorio p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .cta-observatorio div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .cta-observatorio a {
+    max-width: 300px;
+    text-align: center;
+  }
+}
 }
 
 /*== 1050px ==*/
@@ -2906,165 +3112,161 @@ header {
   }
 
   /* responsivo página oservatório */
+
   /* HERO */
-
-  .hero-observatorio {
-    min-height: 75vh;
-    padding: 70px 40px;
+  .hero-observatorio{
+    min-height:90vh;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
   }
 
-  .hero-content {
-    margin-left: 4%;
-    max-width: 650px;
+  .hero-content{
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
   }
 
-  .hero-content h1 {
-    font-size: 3.8rem;
+  .hero-content h1{
+    font-size:3.5rem;
+    text-align: center;
   }
 
-  .hero-content p {
-    font-size: 1.1rem;
+  .hero-content p{
+    font-size:1.1rem;
   }
 
   /* SOBRE */
 
-  .sobre-observatorio {
-    height: auto;
-    padding: 80px 0;
+  .sobre-observatorio{
+    padding:70px 40px;
+    height:auto;
   }
 
-  .sobre-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+  .sobre-grid{
+    gap:40px;
   }
 
-  .sobre-img img {
-    width: 100%;
-    max-width: 430px;
-    height: auto;
+  .sobre-img img{
+    width:100%;
+    max-width:420px;
+    height:auto;
+  }
+
+  .sobre-texto h2{
+    font-size:2.4rem;
   }
 
   /* COMO ATUAMOS */
 
-  .atuacao {
-    height: auto;
-    padding: 70px 0;
+  .atuacao{
+    height:auto;
+    padding:60px 40px;
   }
 
-  .atuacao-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  .atuacao-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
   }
 
-  /* TIMELINE */
+  /* TRAJETÓRIA */
 
-  .timeline {
-    height: auto;
-    padding: 70px 0;
+  .timeline{
+    min-height:auto;
+    padding:60px 40px;
   }
 
-  .timeline-lista {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .timeline-lista{
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
   }
 
   /* IMPACTO */
 
-  .impacto-observatorio {
-    height: auto;
-    padding: 40px 20px;
+  .impacto-observatorio{
+    height:auto;
+    padding:50px 40px;
   }
 
-  .impacto-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  .impacto-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
   }
 
-  .impacto-grid div {
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  .impacto-grid div{
+    border-right:none;
+    border-bottom:1px solid #c7b6a4;
+    padding:20px;
   }
 
-  .impacto-grid div:last-child {
-    border-right: none;
+  .impacto-grid div:nth-child(3),
+  .impacto-grid div:nth-child(4){
+    border-bottom:none;
   }
 
   /* GALERIA */
 
-  .galeria {
-    min-height: auto;
-    padding: 80px 0;
+  .galeria{
+    padding:70px 40px;
   }
 
-  .galeria-swiper {
-    max-width: 95%;
-    padding: 0 50px 50px;
+  .galeria-swiper{
+    max-width:900px;
   }
 
-  .galeria-swiper .swiper-slide img {
-    width: 240px;
-    height: 170px;
+  .galeria-swiper .swiper-slide img{
+    width:250px;
+    height:170px;
   }
 
-  /* LIGHTBOX */
+  /* TECNOLOGIA */
 
-  .lightbox-img {
-    max-width: 85%;
-    max-height: 85%;
+  .tecnologia-social{
+    padding:70px 40px;
+    height:auto;
   }
 
-  .anterior,
-  .proximo {
-    font-size: 55px;
+  .tecnologia-grid{
+    gap:40px;
   }
 
-  /* TECNOLOGIA SOCIAL */
-
-  .tecnologia-social {
-    height: auto;
-    padding: 80px 0;
+  .tecnologia-social .container img{
+    width:100%;
+    max-width:340px;
+    height:auto;
   }
 
-  .tecnologia-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .tecnologia-social .container img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
+  .tecnologia-social h2{
+    font-size:2.3rem;
   }
 
   /* RECONHECIMENTO */
 
-  .reconhecimento {
-    height: auto;
-    padding: 70px 0;
+  .reconhecimento{
+    height:auto;
+    padding:60px 40px;
   }
 
-  .container-reco {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+  .container-reco{
+    gap:30px;
   }
 
-  .paragrafo {
-    width: 60%;
-  }
-
-  .container-img {
-    width: 40%;
+  .paragrafo{
+    width:55%;
   }
 
   /* CTA */
 
-  .cta-observatorio .container {
-    gap: 20px;
+  .cta-observatorio{
+    padding:70px 40px;
   }
 
-  .cta-observatorio h2 {
-    font-size: 2.2rem;
+  .cta-observatorio .container{
+    gap:40px;
+  }
+
+  .cta-observatorio h2{
+    font-size:2.2rem;
   }
 }
+
