@@ -1446,34 +1446,84 @@ header {
   color: #642435;
 }
 
-.ods{
+/* ODS */
+.ods-hero{
+    margin-top:35px;
+
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:flex-end;
-    gap:10px;
-    margin-top:30px;
-    flex-wrap:wrap;
+    justify-content:center;
+
+    width:100%;
 }
 
-.ods span{
-    font-weight:600;
-    color:#642435;
-    font-family:"AristotelicaPro";
+.ods-hero .span-ODS{
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(255, 255, 255);
+  font-size: 0.86rem;
+  letter-spacing: -0.50px;
+
 }
 
-.ods img{
-    width:42px;
-    height:42px;
-    transition:.3s;
+.ods-hero .ods-icones{
+    display:flex;
+    justify-content:center;
+    gap:15px;
 }
 
-.ods img:hover{
-    transform:scale(1.1);
+.ods-hero img{
+    width:70px;
+    height:70px;
+}
+
+.ods {
+  width: 100%;
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding: 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ods span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(53, 1, 39);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.ods-icones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ods-icones img {
+  width: 78px;
+  height: 78px;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.ods-icones img:hover {
+  transform: translateY(-4px);
 }
 
 /* pagina linha do tempo */
 /* HERO DA PÁGINA */
-
 .ldt-hero {
   width: 100%;
   min-height: 90vh;
@@ -1998,7 +2048,6 @@ header {
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
 
   transition:
-    background 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
 }
@@ -2074,12 +2123,12 @@ header {
 
 /* Títulos principais */
 
-.ciclos-hero-titulo,
-.ciclos-titulo-secao,
+
 .ciclos-premio-titulo,
 .ciclos-contato-titulo {
     font-family: "TanBuste";
 }
+
 
 /* Subtítulos */
 
@@ -2136,21 +2185,10 @@ header {
     font-family: "TanBuste";
 }
 
-/* Selo do prêmio */
-
-.ciclos-hero-selo-numero,
-.ciclos-premio-ano {
-    font-family: "TanBuste";
-}
 
 .ciclos-hero-selo-texto {
     font-family: "AristotelicaPro";
 }
-
-/* =========================================================
-   RESET
-========================================================= */
-
 
 
 img {
@@ -2448,11 +2486,11 @@ section {
 .ciclos-hero-titulo {
   max-width: 690px;
   color: var(--ciclos-branco);
-  font-family: "Poppins", sans-serif;
+  font-family: "TanBuste";
   font-size: clamp(2.7rem, 5vw, 5rem);
   font-weight: 800;
   line-height: 1.08;
-  letter-spacing: -2px;
+  letter-spacing: 4px;
 }
 
 .ciclos-hero-titulo span {
@@ -2630,11 +2668,11 @@ section {
 
 .ciclos-titulo-secao {
   color: var(--ciclos-preto);
-  font-family: "Poppins", sans-serif;
+  font-family:"TanBuste";
   font-size: clamp(2rem, 3.3vw, 3.25rem);
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: -1px;
+  letter-spacing: 4px;
 }
 
 .ciclos-titulo-secao span {
@@ -2938,7 +2976,8 @@ section {
   position: relative;
   z-index: 2;
   color: var(--ciclos-preto);
-  font-family: "Poppins", sans-serif;
+  font-family: "TanBuste";
+  letter-spacing: 4px;
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -3034,7 +3073,8 @@ section {
 
 .ciclos-premio-titulo {
   color: var(--ciclos-branco);
-  font-family: "Poppins", sans-serif;
+  font-family:"TanBuste";
+  letter-spacing: 4px;
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   font-weight: 800;
   line-height: 1.15;
@@ -3309,7 +3349,8 @@ section {
 
 .ciclos-contato-titulo {
   color: var(--ciclos-branco);
-  font-family: "Poppins", sans-serif;
+ font-family:"TanBuste";
+ letter-spacing: 4px;
   font-size: clamp(2.4rem, 4vw, 4rem);
   font-weight: 800;
   line-height: 1.15;
