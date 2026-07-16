@@ -79,6 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "observatorio08.jpg",
     "observatorio09.jpg",
     "observatorio10.jpg",
+    "observatorio11.jpg",
+    "observatorio12.jpg",
+    "observatorio13.jpg",
+    "observatorio14.jpg",
+    "observatorio15.jpg",
+    "observatorio16.jpg",
   ];
 
   const galeria = document.getElementById("galeriaFotos");
@@ -155,5 +161,194 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     lightboxImg.src = `imagem/galeria/${fotos[fotoAtual]}`;
+  });
+});
+
+// Pagina linha do tempo
+// Seleciona todos os elementos da página Linha do Tempo
+// que possuem a classe ldt-revelar.
+const elementosLinhaDoTempo = document.querySelectorAll(".ldt-revelar");
+
+// Função responsável por mostrar os elementos
+// quando eles entram na área visível da tela.
+function revelarLinhaDoTempo() {
+  const limiteVisivel = window.innerHeight * 0.85;
+
+  elementosLinhaDoTempo.forEach((elemento) => {
+    const posicaoElemento = elemento.getBoundingClientRect().top;
+
+    if (posicaoElemento < limiteVisivel) {
+      elemento.classList.add("ldt-visivel");
+    }
+  });
+}
+
+// Executa quando a página carregar.
+window.addEventListener("load", revelarLinhaDoTempo);
+
+// Executa sempre que o usuário rolar a página.
+window.addEventListener("scroll", revelarLinhaDoTempo);
+
+// Página programa ciclos
+document.addEventListener("DOMContentLoaded", () => {
+  /* =====================================================
+     ELEMENTOS DA PÁGINA CICLOS
+  ====================================================== */
+
+  const elementosAnimados = document.querySelectorAll("[data-ciclos-animacao]");
+
+  const anoRodape = document.querySelector("#ciclos-ano");
+
+  const imagensPagina = document.querySelectorAll(
+    ".ciclos-hero-imagem, " +
+      ".ciclos-imagem-principal, " +
+      ".ciclos-galeria-imagem",
+  );
+
+  /* =====================================================
+     ANO AUTOMÁTICO NO RODAPÉ
+  ====================================================== */
+
+  if (anoRodape) {
+    anoRodape.textContent = new Date().getFullYear();
+  }
+
+  /* =====================================================
+     ROLAGEM SUAVE DOS LINKS INTERNOS DA PÁGINA
+  ====================================================== */
+
+  const linksInternos = document.querySelectorAll(
+    'a[href^="#"]:not([href="#"])',
+  );
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", (evento) => {
+      const destinoId = link.getAttribute("href");
+
+      if (!destinoId) {
+        return;
+      }
+
+      const destino = document.querySelector(destinoId);
+
+      if (!destino) {
+        return;
+      }
+
+      evento.preventDefault();
+
+      const header = document.querySelector("header");
+
+      const alturaHeader = header ? header.offsetHeight : 0;
+
+      const posicaoDestino =
+        destino.getBoundingClientRect().top + window.scrollY - alturaHeader;
+
+      window.scrollTo({
+        top: posicaoDestino,
+        behavior: "smooth",
+      });
+    });
+  });
+
+  /* =====================================================
+     ANIMAÇÕES AO ROLAR A PÁGINA
+  ====================================================== */
+
+  if ("IntersectionObserver" in window) {
+    const observadorAnimacao = new IntersectionObserver(
+      (entradas, observador) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add("ciclos-animacao-ativa");
+
+            observador.unobserve(entrada.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    );
+
+    elementosAnimados.forEach((elemento, indice) => {
+      const atraso = (indice % 4) * 0.08;
+
+      elemento.style.transitionDelay = `${atraso}s`;
+
+      observadorAnimacao.observe(elemento);
+    });
+  } else {
+    elementosAnimados.forEach((elemento) => {
+      elemento.classList.add("ciclos-animacao-ativa");
+    });
+  }
+
+  /* =====================================================
+     ACESSIBILIDADE: MOVIMENTO REDUZIDO
+  ====================================================== */
+
+  const movimentoReduzido = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+
+  function verificarMovimentoReduzido() {
+    if (!movimentoReduzido.matches) {
+      return;
+    }
+
+    elementosAnimados.forEach((elemento) => {
+      elemento.classList.add("ciclos-animacao-ativa");
+      elemento.style.transition = "none";
+      elemento.style.transitionDelay = "0s";
+    });
+  }
+
+  verificarMovimentoReduzido();
+
+  if (movimentoReduzido.addEventListener) {
+    movimentoReduzido.addEventListener("change", verificarMovimentoReduzido);
+  }
+
+  /* =====================================================
+     AVISO QUANDO UMA IMAGEM NÃO FOR ENCONTRADA
+  ====================================================== */
+
+  imagensPagina.forEach((imagem) => {
+    imagem.addEventListener("error", () => {
+      const elementoPai = imagem.parentElement;
+
+      imagem.classList.add("ciclos-imagem-indisponivel");
+
+      imagem.alt = "Imagem do Programa Ciclos ainda não adicionada";
+
+      if (!elementoPai) {
+        return;
+      }
+
+      const avisoExistente = elementoPai.querySelector(".ciclos-aviso-imagem");
+
+      if (avisoExistente) {
+        return;
+      }
+
+      const aviso = document.createElement("div");
+
+      aviso.className = "ciclos-aviso-imagem";
+
+      aviso.innerHTML = `
+        <i
+          class="fa-regular fa-image"
+          aria-hidden="true"
+        ></i>
+
+        <span>
+          Imagem do Programa Ciclos ainda não adicionada
+        </span>
+      `;
+
+      elementoPai.appendChild(aviso);
+    });
   });
 });
