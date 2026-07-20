@@ -352,3 +352,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/*=========================
+LIGHTBOX GALERIA
+==========================*/
+
+const imagens = document.querySelectorAll(".ciclos-lightbox-item");
+
+const lightbox = document.querySelector(".ciclos-lightbox");
+
+const imagemGrande = document.querySelector(".ciclos-lightbox-img");
+
+const fechar = document.querySelector(".ciclos-lightbox-fechar");
+
+imagens.forEach((imagem) => {
+  imagem.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    imagemGrande.src = imagem.href;
+
+    lightbox.classList.add("ativo");
+
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function fecharLightbox() {
+  lightbox.classList.remove("ativo");
+
+  document.body.style.overflow = "auto";
+}
+
+fechar.addEventListener("click", fecharLightbox);
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    fecharLightbox();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    fecharLightbox();
+  }
+});
