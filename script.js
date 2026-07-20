@@ -85,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "observatorio14.jpg",
     "observatorio15.jpg",
     "observatorio16.jpg",
+    "observatorio17.jpg",
+    "observatorio18.jpg",
+    "observatorio19.jpg",
   ];
 
   const galeria = document.getElementById("galeriaFotos");
@@ -101,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slide.classList.add("swiper-slide");
 
     const img = document.createElement("img");
-    img.src = `imagem/galeria/${foto}`;
+    img.src = `imagem/galeria-observatorio/${foto}`;
     img.alt = "Foto do Observatório";
 
     img.addEventListener("click", () => {

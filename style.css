@@ -935,7 +935,7 @@ header {
   min-height: 90vh;
   background:
     linear-gradient(rgba(6, 36, 2, 0.81), rgba(0, 51, 5, 0.56)),
-    url("imagem/observatorio-inicio.jpg") center/cover no-repeat;
+    url("imagem/galeria-observatorio/observatorio01.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
