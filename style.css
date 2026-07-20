@@ -3637,6 +3637,8 @@ section {
 }
 
 
+
+
 /* =========================================================
    ANIMAÇÕES DE ENTRADA
 ========================================================= */
@@ -3663,6 +3665,1015 @@ section {
 [data-ciclos-animacao].ciclos-animacao-ativa {
   opacity: 1;
   transform: translate(0);
+}
+
+/* Página sementes */
+/* =========================================================
+   PÁGINA PROJETO SEMENTES DA GAIA
+========================================================= */
+
+:root {
+  --sementes-verde-escuro: #244d35;
+  --sementes-verde: #557a46;
+  --sementes-verde-claro: #8da85d;
+  --sementes-oliva: #858329;
+  --sementes-laranja: #b45622;
+  --sementes-bege: #f5efe4;
+  --sementes-bege-claro: #fbf8f2;
+  --sementes-branco: #ffffff;
+  --sementes-preto: #1d1d1d;
+  --sementes-cinza: #666666;
+  --sementes-sombra: 0 15px 40px rgba(31, 56, 39, 0.12);
+  --sementes-transicao: 0.4s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--sementes-branco);
+  color: var(--sementes-preto);
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+}
+
+.sementes-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TÍTULOS E ELEMENTOS GERAIS
+========================================================= */
+
+.sementes-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--sementes-laranja);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.sementes-tag-clara {
+  color: #f4c294;
+}
+
+.sementes-titulo-section {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.sementes-titulo-section h2 {
+  position: relative;
+  margin: 0 0 20px;
+  padding-bottom: 20px;
+  color: var(--sementes-verde-escuro);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.sementes-titulo-section h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--sementes-laranja);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.sementes-titulo-section p {
+  margin: 0;
+  color: var(--sementes-cinza);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.sementes-btn {
+  display: inline-flex;
+  min-height: 52px;
+  padding: 14px 28px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--sementes-transicao);
+}
+
+.sementes-btn-principal {
+  border-color: var(--sementes-laranja);
+  background-color: var(--sementes-laranja);
+  color: var(--sementes-branco);
+}
+
+.sementes-btn-principal:hover {
+  border-color: #914119;
+  background-color: #914119;
+  box-shadow: 0 12px 30px rgba(180, 86, 34, 0.28);
+  transform: translateY(-3px);
+}
+
+.sementes-btn-contorno {
+  border-color: var(--sementes-branco);
+  background-color: transparent;
+  color: var(--sementes-branco);
+}
+
+.sementes-btn-contorno:hover {
+  background-color: var(--sementes-branco);
+  color: var(--sementes-verde-escuro);
+  transform: translateY(-3px);
+}
+
+.sementes-btn-contorno-claro {
+  border-color: var(--sementes-branco);
+  background-color: transparent;
+  color: var(--sementes-branco);
+}
+
+.sementes-btn-contorno-claro:hover {
+  background-color: var(--sementes-branco);
+  color: var(--sementes-verde-escuro);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sementes-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 130px 20px 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      rgba(21, 51, 35, 0.83),
+      rgba(38, 76, 48, 0.69)
+    ),
+    url("imagem/sementes/sementes-hero.jpg") center/cover no-repeat;
+  color: var(--sementes-branco);
+  text-align: center;
+}
+
+.sementes-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(180, 86, 34, 0.2),
+      transparent 35%
+    );
+}
+
+.sementes-hero-conteudo {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sementes-hero-subtitulo {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #f0c498;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.sementes-hero h1 {
+  margin: 0 0 12px;
+  color: var(--sementes-branco);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sementes-hero h1 strong {
+  color: #d4df9f;
+  font-weight: 700;
+}
+
+.sementes-hero h2 {
+  margin: 0 0 25px;
+  color: #f0c498;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.sementes-hero p {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.sementes-hero-botoes {
+  display: flex;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sementes-seta-scroll {
+  position: absolute;
+  z-index: 3;
+  bottom: 25px;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sementes-branco);
+  text-decoration: none;
+  transform: translateX(-50%);
+  animation: sementes-seta 2s infinite;
+}
+
+@keyframes sementes-seta {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
+/* =========================================================
+   ODS
+========================================================= */
+
+.sementes-ods {
+  margin-top: 35px;
+}
+
+.sementes-ods > span {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--sementes-verde-escuro);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.sementes-ods-lista {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.sementes-ods-lista img {
+  width: 68px;
+  height: 68px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.13);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-ods-lista img:hover {
+  transform: translateY(-6px) scale(1.04);
+}
+
+.sementes-ods-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sementes-ods-hero > span,
+.sementes-ods-impacto > span,
+.sementes-ods-cta > span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sementes-ods-central {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sementes-sobre {
+  padding: 110px 0;
+  background-color: var(--sementes-bege-claro);
+}
+
+.sementes-sobre-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+}
+
+.sementes-sobre-imagem {
+  position: relative;
+}
+
+.sementes-sobre-imagem::before {
+  position: absolute;
+  z-index: 0;
+  top: -24px;
+  left: -24px;
+  width: 60%;
+  height: 60%;
+  border-radius: 28px 0 0;
+  background-color: rgba(133, 131, 41, 0.18);
+  content: "";
+}
+
+.sementes-sobre-imagem img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 580px;
+  border-radius: 8px 80px 8px 8px;
+  object-fit: cover;
+  box-shadow: var(--sementes-sombra);
+}
+
+.sementes-sobre-detalhe {
+  position: absolute;
+  z-index: 2;
+  right: -35px;
+  bottom: 35px;
+  width: 180px;
+  min-height: 170px;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sementes-laranja);
+  box-shadow: 0 15px 35px rgba(95, 43, 15, 0.3);
+  color: var(--sementes-branco);
+  text-align: center;
+}
+
+.sementes-sobre-detalhe span {
+  font-family: "Playfair Display", serif;
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sementes-sobre-detalhe p {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sementes-sobre-texto h2 {
+  margin: 0 0 25px;
+  color: var(--sementes-verde-escuro);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.sementes-sobre-texto > p {
+  margin: 0 0 18px;
+  color: var(--sementes-cinza);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.sementes-sobre-texto strong {
+  color: var(--sementes-verde-escuro);
+}
+
+.sementes-sobre-destaques {
+  display: grid;
+  margin-top: 35px;
+  gap: 18px;
+}
+
+.sementes-destaque-item {
+  padding: 20px;
+  border-left: 4px solid var(--sementes-oliva);
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background-color: var(--sementes-branco);
+  box-shadow: 0 8px 24px rgba(37, 72, 50, 0.08);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-destaque-item:hover {
+  border-left-color: var(--sementes-laranja);
+  transform: translateX(7px);
+}
+
+.sementes-destaque-item > i {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(133, 131, 41, 0.14);
+  color: var(--sementes-oliva);
+  font-size: 1.25rem;
+}
+
+.sementes-destaque-item h3 {
+  margin: 0 0 6px;
+  color: var(--sementes-verde-escuro);
+  font-size: 1rem;
+}
+
+.sementes-destaque-item p {
+  margin: 0;
+  color: var(--sementes-cinza);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   AÇÕES
+========================================================= */
+
+.sementes-acoes {
+  padding: 110px 0;
+  background-color: var(--sementes-branco);
+}
+
+.sementes-acoes-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.sementes-acao-card {
+  overflow: hidden;
+  border: 1px solid rgba(35, 77, 53, 0.1);
+  border-radius: 12px;
+  background-color: var(--sementes-branco);
+  box-shadow: var(--sementes-sombra);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-acao-card:hover {
+  box-shadow: 0 20px 45px rgba(31, 56, 39, 0.18);
+  transform: translateY(-8px);
+}
+
+.sementes-acao-imagem {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.sementes-acao-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s ease;
+}
+
+.sementes-acao-card:hover .sementes-acao-imagem img {
+  transform: scale(1.08);
+}
+
+.sementes-acao-numero {
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+.sementes-acao-conteudo {
+  position: relative;
+  padding: 35px 28px 30px;
+}
+
+.sementes-acao-icone {
+  position: absolute;
+  top: -30px;
+  left: 28px;
+  width: 60px;
+  height: 60px;
+  border: 5px solid var(--sementes-branco);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sementes-oliva);
+  color: var(--sementes-branco);
+  font-size: 1.25rem;
+  box-shadow: 0 8px 20px rgba(59, 76, 34, 0.25);
+}
+
+.sementes-acao-conteudo h3 {
+  margin: 8px 0 14px;
+  color: var(--sementes-verde-escuro);
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.sementes-acao-resumo,
+.sementes-acao-detalhes p {
+  color: var(--sementes-cinza);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.sementes-acao-resumo {
+  margin: 0 0 15px;
+}
+
+.sementes-acao-detalhes {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.55s ease,
+    opacity 0.4s ease,
+    margin 0.4s ease;
+}
+
+.sementes-acao-detalhes p {
+  margin: 0 0 12px;
+}
+
+.sementes-acao-card.ativo .sementes-acao-detalhes {
+  max-height: 400px;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+.sementes-btn-detalhes {
+  margin-top: 10px;
+  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--sementes-laranja);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sementes-btn-detalhes i {
+  transition: var(--sementes-transicao);
+}
+
+.sementes-acao-card.ativo .sementes-btn-detalhes i {
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   IMPACTO
+========================================================= */
+
+.sementes-impacto {
+  position: relative;
+  padding: 120px 0;
+  background:
+    linear-gradient(
+      rgba(23, 57, 37, 0.9),
+      rgba(31, 68, 43, 0.85)
+    ),
+    url("imagem/sementes/sementes-impacto.jpg") center/cover fixed no-repeat;
+  color: var(--sementes-branco);
+}
+
+.sementes-impacto-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(128, 126, 39, 0.16),
+      transparent 55%
+    );
+}
+
+.sementes-impacto-conteudo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.sementes-impacto-texto {
+  max-width: 800px;
+  margin: 0 auto 55px;
+}
+
+.sementes-impacto-texto h2 {
+  margin: 0 0 25px;
+  color: var(--sementes-branco);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sementes-impacto-texto p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.sementes-impacto-numeros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.sementes-impacto-card {
+  min-height: 190px;
+  padding: 30px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-impacto-card:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-7px);
+}
+
+.sementes-impacto-card strong {
+  color: #f2cf9f;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.sementes-impacto-card span {
+  margin-top: 14px;
+  color: var(--sementes-branco);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sementes-ods-impacto {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.sementes-galeria {
+  padding: 110px 0;
+  background-color: var(--sementes-bege-claro);
+}
+
+.sementes-galeria-grid {
+  display: grid;
+  grid-auto-rows: 250px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.sementes-galeria-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sementes-galeria-grande {
+  grid-row: span 2;
+}
+
+.sementes-galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s ease;
+}
+
+.sementes-galeria-item::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(25, 56, 36, 0.72),
+      transparent 60%
+    );
+  content: "";
+  opacity: 0;
+  transition: var(--sementes-transicao);
+}
+
+.sementes-galeria-item > span {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sementes-branco);
+  color: var(--sementes-verde-escuro);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-galeria-item:hover img {
+  transform: scale(1.08);
+}
+
+.sementes-galeria-item:hover::after {
+  opacity: 1;
+}
+
+.sementes-galeria-item:hover > span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.sementes-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 20, 14, 0.94);
+  opacity: 0;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.sementes-modal.ativo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sementes-modal img {
+  max-width: 90%;
+  max-height: 88vh;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  transform: scale(0.92);
+  transition: var(--sementes-transicao);
+}
+
+.sementes-modal.ativo img {
+  transform: scale(1);
+}
+
+.sementes-modal-fechar {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--sementes-branco);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: var(--sementes-transicao);
+}
+
+.sementes-modal-fechar:hover {
+  background-color: var(--sementes-laranja);
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.sementes-cta {
+  position: relative;
+  padding: 110px 0;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      var(--sementes-verde-escuro),
+      var(--sementes-oliva)
+    );
+  color: var(--sementes-branco);
+}
+
+.sementes-cta::before,
+.sementes-cta::after {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  content: "";
+}
+
+.sementes-cta::before {
+  top: -120px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+}
+
+.sementes-cta::after {
+  right: -130px;
+  bottom: -150px;
+  width: 430px;
+  height: 430px;
+}
+
+.sementes-cta-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sementes-cta-icone {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.65rem;
+}
+
+.sementes-cta-conteudo > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #f2cf9f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.sementes-cta h2 {
+  margin: 0 0 22px;
+  color: var(--sementes-branco);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.1rem, 5vw, 3.8rem);
+  line-height: 1.15;
+}
+
+.sementes-cta p {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.sementes-cta-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sementes-ods-cta {
+  display: flex;
+  margin-top: 45px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+   ANIMAÇÃO AO ROLAR
+========================================================= */
+
+.sementes-revelar {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.sementes-revelar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+.sementes-btn:focus-visible,
+.sementes-btn-detalhes:focus-visible,
+.sementes-galeria-item:focus-visible,
+.sementes-modal-fechar:focus-visible,
+.sementes-seta-scroll:focus-visible {
+  outline: 3px solid #f4c294;
+  outline-offset: 4px;
+}
+
+body.sementes-modal-aberto {
+  overflow: hidden;
 }
 
 /* Style para celular */
@@ -4584,6 +5595,76 @@ section {
   .ldt-revelar {
     transform: translateY(25px);
   }
+
+  /* página ciclos */
+
+
+  .ciclos-galeria {
+    padding: 70px 20px;
+  }
+
+  .ciclos-galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 16px;
+  }
+
+  .ciclos-galeria-item,
+  .ciclos-galeria-item-grande,
+  .ciclos-galeria-item-horizontal {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    height: 250px;
+  }
+
+  .ciclos-lightbox-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ciclos-galeria-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ciclos-galeria-legenda {
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* Imagem aberta no lightbox */
+
+  .ciclos-lightbox {
+    padding: 20px;
+  }
+
+  .ciclos-lightbox-img {
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 75vh;
+
+    border-radius: 12px;
+  }
+
+  .ciclos-lightbox-fechar {
+    top: 12px;
+    right: 18px;
+
+    font-size: 42px;
+    line-height: 1;
+  }
+  /* Página sementes */
 }
 
 /*== 850px ==*/
@@ -5352,7 +6433,68 @@ section {
   }
 
   /* Página ciclos */
-  
+  .ciclos-galeria {
+    padding: 90px 35px;
+  }
+
+  .ciclos-galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 280px 240px 240px;
+    gap: 18px;
+  }
+
+  .ciclos-galeria-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ciclos-galeria-item-grande {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .ciclos-galeria-item-horizontal {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .ciclos-lightbox-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ciclos-galeria-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ciclos-galeria-legenda {
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+
+    font-size: 0.84rem;
+  }
+
+  .ciclos-lightbox-img {
+    width: auto;
+    height: auto;
+
+    max-width: 88vw;
+    max-height: 80vh;
+  }
+
+  .ciclos-lightbox-fechar {
+    top: 18px;
+    right: 25px;
+
+    font-size: 48px;
+  }
+
+  /* Página sementes */
 }
 
 /*== 1050px ==*/
@@ -5982,5 +7124,66 @@ section {
   .ldt-futuro-grade {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* página ciclos */
+  .ciclos-galeria {
+    padding: 100px 45px;
+  }
+
+  .ciclos-galeria-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 0.9fr;
+    grid-template-rows: 240px 240px;
+    gap: 18px;
+  }
+
+  .ciclos-galeria-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ciclos-galeria-item-grande {
+    grid-row: span 2;
+  }
+
+  .ciclos-galeria-item-horizontal {
+    grid-column: span 2;
+  }
+
+  .ciclos-lightbox-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ciclos-galeria-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ciclos-galeria-legenda {
+    left: 20px;
+    bottom: 17px;
+
+    font-size: 0.86rem;
+  }
+
+  .ciclos-lightbox-img {
+    width: auto;
+    height: auto;
+
+    max-width: 82vw;
+    max-height: 82vh;
+  }
+
+  .ciclos-lightbox-fechar {
+    top: 20px;
+    right: 30px;
+
+    font-size: 52px;
+  }
+
+  /* Página sementes */
 }
 
