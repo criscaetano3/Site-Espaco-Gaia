@@ -2228,134 +2228,6 @@ section {
 
 
 /* =========================================================
-   CABEÇALHO
-========================================================= */
-
-.ciclos-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(95, 37, 159, 0.08);
-  backdrop-filter: blur(12px);
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-header.ciclos-header-rolagem {
-  box-shadow: 0 8px 30px rgba(52, 22, 82, 0.12);
-}
-
-.ciclos-header-container {
-  width: min(92%, 1320px);
-  min-height: 82px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.ciclos-logo-link {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.ciclos-logo {
-  width: 115px;
-  height: auto;
-  object-fit: contain;
-}
-
-.ciclos-nav {
-  display: flex;
-  align-items: center;
-}
-
-.ciclos-menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.ciclos-menu-link {
-  position: relative;
-  color: var(--ciclos-cinza-escuro);
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-menu-link::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -8px;
-  width: 0;
-  height: 3px;
-  background-color: var(--ciclos-roxo-principal);
-  border-radius: 20px;
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-menu-link:hover,
-.ciclos-menu-link.ciclos-link-ativo {
-  color: var(--ciclos-roxo-principal);
-}
-
-.ciclos-menu-link:hover::after,
-.ciclos-menu-link.ciclos-link-ativo::after {
-  left: 0;
-  right: auto;
-  width: 100%;
-}
-
-.ciclos-btn-header {
-  min-height: 45px;
-  padding: 0 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--ciclos-roxo-principal);
-  color: var(--ciclos-branco);
-  border-radius: 50px;
-  font-size: 0.86rem;
-  font-weight: 700;
-  white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(95, 37, 159, 0.22);
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-btn-header:hover {
-  background-color: var(--ciclos-roxo-escuro);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(95, 37, 159, 0.3);
-}
-
-.ciclos-menu-mobile {
-  width: 45px;
-  height: 45px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 6px;
-  background-color: transparent;
-  border-radius: 8px;
-}
-
-.ciclos-menu-linha {
-  width: 26px;
-  height: 3px;
-  background-color: var(--ciclos-roxo-principal);
-  border-radius: 50px;
-  transition: var(--ciclos-transicao);
-}
-
-
-/* =========================================================
    BOTÕES GERAIS
 ========================================================= */
 
@@ -2608,7 +2480,7 @@ section {
 }
 
 .ciclos-hero-selo-numero {
-  font-family: "Poppins", sans-serif;
+  font-family: "TanParadiso";
   font-size: 1.8rem;
   font-weight: 800;
   line-height: 1;
@@ -3055,7 +2927,7 @@ section {
 .ciclos-premio-ano {
   margin-top: 18px;
   color: var(--ciclos-branco);
-  font-family: "Poppins", sans-serif;
+  font-family: "TanBuste";
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 4px;
@@ -3161,7 +3033,7 @@ section {
 
 .ciclos-valor-conteudo h3 {
   color: var(--ciclos-preto);
-  font-family: "Poppins", sans-serif;
+  font-family: "TanParadiso";
   font-size: 1rem;
 }
 
@@ -3496,150 +3368,6 @@ section {
 
 
 /* =========================================================
-   RODAPÉ
-========================================================= */
-
-.ciclos-footer {
-  padding: 75px 0 25px;
-  background-color: #21102f;
-  color: var(--ciclos-branco);
-}
-
-.ciclos-footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr 0.7fr 1fr;
-  gap: 55px;
-}
-
-.ciclos-footer-logo-link {
-  display: inline-flex;
-}
-
-.ciclos-footer-logo {
-  width: 135px;
-  height: auto;
-}
-
-.ciclos-footer-descricao {
-  max-width: 330px;
-  margin-top: 22px;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.87rem;
-  line-height: 1.75;
-}
-
-.ciclos-footer-redes {
-  margin-top: 23px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.ciclos-footer-redes a {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.09);
-  color: var(--ciclos-branco);
-  border-radius: 50%;
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-footer-redes a:hover {
-  background-color: var(--ciclos-roxo-claro);
-  transform: translateY(-4px);
-}
-
-.ciclos-footer-titulo {
-  margin-bottom: 22px;
-  color: var(--ciclos-branco);
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.ciclos-footer-lista {
-  display: grid;
-  gap: 12px;
-}
-
-.ciclos-footer-lista a {
-  color: rgba(255, 255, 255, 0.67);
-  font-size: 0.84rem;
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-footer-lista a:hover {
-  color: var(--ciclos-amarelo);
-  padding-left: 5px;
-}
-
-.ciclos-footer-contatos {
-  display: grid;
-  gap: 17px;
-}
-
-.ciclos-footer-contatos li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
-
-.ciclos-footer-contatos i {
-  margin-top: 4px;
-  color: var(--ciclos-amarelo);
-}
-
-.ciclos-footer-contatos a {
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-footer-contatos a:hover {
-  color: var(--ciclos-amarelo);
-}
-
-.ciclos-footer-final {
-  margin-top: 55px;
-  padding-top: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.ciclos-footer-final p {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.76rem;
-}
-
-.ciclos-voltar-topo {
-  width: 43px;
-  height: 43px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--ciclos-roxo-principal);
-  color: var(--ciclos-branco);
-  border-radius: 50%;
-  transition: var(--ciclos-transicao);
-}
-
-.ciclos-voltar-topo:hover {
-  background-color: var(--ciclos-amarelo);
-  color: var(--ciclos-roxo-escuro);
-  transform: translateY(-5px);
-}
-
-
-
-
-/* =========================================================
    ANIMAÇÕES DE ENTRADA
 ========================================================= */
 
@@ -3667,10 +3395,51 @@ section {
   transform: translate(0);
 }
 
-/* Página sementes */
+
 /* =========================================================
    PÁGINA PROJETO SEMENTES DA GAIA
 ========================================================= */
+.sementes-hero h1,
+.sementes-titulo-section h2,
+.sementes-sobre-texto h2,
+.sementes-impacto-texto h2,
+.sementes-cta h2 {
+  font-family: "TanBuste", serif;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+/* SUBTÍTULOS E TÍTULOS DOS CARDS */
+
+.sementes-hero h2,
+.sementes-acao-conteudo h3,
+.sementes-destaque-item h3,
+.sementes-sobre-detalhe span,
+.sementes-impacto-card strong {
+  font-family: "AristotelicaPro", sans-serif;
+  font-weight: normal;
+}
+
+/* TEXTOS DECORATIVOS E DESTAQUES */
+
+.sementes-hero-subtitulo,
+.sementes-tag,
+.sementes-cta-conteudo > span {
+  font-family: "TanParadiso", cursive;
+  font-weight: normal;
+}
+
+/* PARÁGRAFOS, BOTÕES E TEXTOS NORMAIS */
+
+body,
+p,
+a,
+button,
+.sementes-btn,
+.sementes-btn-detalhes,
+.sementes-ods > span {
+  font-family: "AristotelicaPro";
+}
 
 :root {
   --sementes-verde-escuro: #244d35;
@@ -3754,7 +3523,6 @@ button {
   margin: 0 0 20px;
   padding-bottom: 20px;
   color: var(--sementes-verde-escuro);
-  font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -3850,7 +3618,7 @@ button {
       rgba(21, 51, 35, 0.83),
       rgba(38, 76, 48, 0.69)
     ),
-    url("imagem/sementes/sementes-hero.jpg") center/cover no-repeat;
+    url("imagem/galeria-sementes/projeto-sementes15.jpg") center/cover no-repeat;
   color: var(--sementes-branco);
   text-align: center;
 }
@@ -3887,7 +3655,6 @@ button {
 .sementes-hero h1 {
   margin: 0 0 12px;
   color: var(--sementes-branco);
-  font-family: "Playfair Display", serif;
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 600;
   line-height: 1;
@@ -3901,7 +3668,7 @@ button {
 .sementes-hero h2 {
   margin: 0 0 25px;
   color: #f0c498;
-  font-family: "Montserrat", sans-serif;
+  font-family:"TanParadiso";
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 500;
   letter-spacing: 7px;
@@ -3966,6 +3733,7 @@ button {
   margin-bottom: 15px;
   color: var(--sementes-verde-escuro);
   font-size: 0.72rem;
+  font-family:"TanParadiso";
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.5;
@@ -4002,6 +3770,7 @@ button {
 .sementes-ods-impacto > span,
 .sementes-ods-cta > span {
   color: rgba(255, 255, 255, 0.85);
+  font-family: "TanParadiso";
 }
 
 .sementes-ods-central {
@@ -4074,7 +3843,6 @@ button {
 }
 
 .sementes-sobre-detalhe span {
-  font-family: "Playfair Display", serif;
   font-size: 3.3rem;
   font-weight: 700;
   line-height: 1;
@@ -4090,7 +3858,7 @@ button {
 .sementes-sobre-texto h2 {
   margin: 0 0 25px;
   color: var(--sementes-verde-escuro);
-  font-family: "Playfair Display", serif;
+  font-family: "TanBuste";
   font-size: clamp(2rem, 4vw, 3.1rem);
   font-weight: 700;
   line-height: 1.18;
@@ -4239,7 +4007,6 @@ button {
 .sementes-acao-conteudo h3 {
   margin: 8px 0 14px;
   color: var(--sementes-verde-escuro);
-  font-family: "Playfair Display", serif;
   font-size: 1.45rem;
   line-height: 1.3;
 }
@@ -4337,7 +4104,6 @@ button {
 .sementes-impacto-texto h2 {
   margin: 0 0 25px;
   color: var(--sementes-branco);
-  font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -4377,7 +4143,6 @@ button {
 
 .sementes-impacto-card strong {
   color: #f2cf9f;
-  font-family: "Playfair Display", serif;
   font-size: clamp(2.6rem, 5vw, 4rem);
   line-height: 1;
 }
@@ -4615,7 +4380,6 @@ button {
 .sementes-cta h2 {
   margin: 0 0 22px;
   color: var(--sementes-branco);
-  font-family: "Playfair Display", serif;
   font-size: clamp(2.1rem, 5vw, 3.8rem);
   line-height: 1.15;
 }
@@ -5665,6 +5429,433 @@ body.sementes-modal-aberto {
     line-height: 1;
   }
   /* Página sementes */
+  .sementes-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .sementes-hero {
+    min-height: 100vh;
+    padding: 120px 20px 70px;
+    background-position: center;
+  }
+
+  .sementes-hero-conteudo {
+    max-width: 100%;
+  }
+
+  .sementes-hero-subtitulo {
+    margin-bottom: 15px;
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+  }
+
+  .sementes-hero h1 {
+    margin-bottom: 15px;
+    font-size: clamp(2.6rem, 15vw, 4.3rem);
+    line-height: 0.95;
+  }
+
+  .sementes-hero h2 {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+
+  .sementes-hero p {
+    max-width: 100%;
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .sementes-hero-botoes {
+    width: 100%;
+    margin-bottom: 35px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sementes-hero-botoes .sementes-btn {
+    width: 100%;
+    max-width: 310px;
+  }
+
+  .sementes-btn {
+    min-height: 48px;
+    padding: 12px 22px;
+    font-size: 0.84rem;
+  }
+
+  .sementes-seta-scroll {
+    bottom: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* =========================
+     TÍTULOS
+  ========================= */
+
+  .sementes-tag {
+    margin-bottom: 12px;
+    font-size: 0.67rem;
+    letter-spacing: 2px;
+  }
+
+  .sementes-titulo-section {
+    margin-bottom: 38px;
+  }
+
+  .sementes-titulo-section h2 {
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    font-size: clamp(2rem, 11vw, 2.8rem);
+    line-height: 1;
+  }
+
+  .sementes-titulo-section p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     ODS
+  ========================= */
+
+  .sementes-ods {
+    margin-top: 28px;
+  }
+
+  .sementes-ods > span {
+    margin-bottom: 12px;
+    font-size: 0.64rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .sementes-ods-lista {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .sementes-ods-lista img {
+    width: 54px;
+    height: 54px;
+  }
+
+  /* =========================
+     SOBRE
+  ========================= */
+
+  .sementes-sobre {
+    padding: 75px 0;
+  }
+
+  .sementes-sobre-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .sementes-sobre-imagem {
+    width: 100%;
+  }
+
+  .sementes-sobre-imagem::before {
+    top: -12px;
+    left: -8px;
+    width: 55%;
+    height: 55%;
+  }
+
+  .sementes-sobre-imagem img {
+    width: 100%;
+    min-height: 380px;
+    max-height: 470px;
+    border-radius: 8px 45px 8px 8px;
+  }
+
+  .sementes-sobre-detalhe {
+    right: 10px;
+    bottom: -25px;
+    width: 135px;
+    min-height: 125px;
+    padding: 16px;
+  }
+
+  .sementes-sobre-detalhe span {
+    font-size: 2.5rem;
+  }
+
+  .sementes-sobre-detalhe p {
+    margin-top: 7px;
+    font-size: 0.68rem;
+  }
+
+  .sementes-sobre-texto {
+    width: 100%;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .sementes-sobre-texto h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 11vw, 2.8rem);
+    line-height: 1.05;
+  }
+
+  .sementes-sobre-texto > p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .sementes-sobre-destaques {
+    margin-top: 28px;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .sementes-destaque-item {
+    padding: 17px 15px;
+    gap: 13px;
+  }
+
+  .sementes-destaque-item:hover {
+    transform: none;
+  }
+
+  .sementes-destaque-item > i {
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
+    font-size: 1rem;
+  }
+
+  .sementes-destaque-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .sementes-destaque-item p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  /* =========================
+     AÇÕES
+  ========================= */
+
+  .sementes-acoes {
+    padding: 75px 0;
+  }
+
+  .sementes-acoes-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .sementes-acao-card {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .sementes-acao-card:hover {
+    transform: none;
+  }
+
+  .sementes-acao-imagem {
+    height: 240px;
+  }
+
+  .sementes-acao-conteudo {
+    padding: 34px 22px 25px;
+  }
+
+  .sementes-acao-icone {
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+
+  .sementes-acao-conteudo h3 {
+    font-size: 1.8rem;
+    line-height: 1.05;
+  }
+
+  .sementes-acao-resumo,
+  .sementes-acao-detalhes p {
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .sementes-btn-detalhes {
+    font-size: 0.82rem;
+  }
+
+  /* =========================
+     IMPACTO
+  ========================= */
+
+  .sementes-impacto {
+    padding: 80px 0;
+    background-attachment: scroll;
+  }
+
+  .sementes-impacto-texto {
+    margin-bottom: 38px;
+  }
+
+  .sementes-impacto-texto h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2.1rem, 11vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .sementes-impacto-texto p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .sementes-impacto-numeros {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .sementes-impacto-card {
+    width: 100%;
+    max-width: 380px;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 25px 15px;
+  }
+
+  .sementes-impacto-card:hover {
+    transform: none;
+  }
+
+  .sementes-impacto-card strong {
+    font-size: 3rem;
+  }
+
+  .sementes-impacto-card span {
+    margin-top: 10px;
+    font-size: 0.82rem;
+  }
+
+  /* =========================
+     GALERIA
+  ========================= */
+
+  .sementes-galeria {
+    padding: 75px 0;
+  }
+
+  .sementes-galeria-grid {
+    grid-auto-rows: 235px;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sementes-galeria-grande {
+    grid-row: span 1;
+  }
+
+  .sementes-galeria-item {
+    min-height: 235px;
+  }
+
+  .sementes-galeria-item::after {
+    opacity: 1;
+    background:
+      linear-gradient(
+        to top,
+        rgba(25, 56, 36, 0.48),
+        transparent 45%
+      );
+  }
+
+  .sementes-galeria-item > span {
+    right: 15px;
+    bottom: 15px;
+    width: 42px;
+    height: 42px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* =========================
+     MODAL
+  ========================= */
+
+  .sementes-modal {
+    padding: 20px 12px;
+  }
+
+  .sementes-modal img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .sementes-modal-fechar {
+    top: 15px;
+    right: 15px;
+    width: 43px;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+  }
+
+  /* =========================
+     CTA
+  ========================= */
+
+  .sementes-cta {
+    padding: 80px 0;
+  }
+
+  .sementes-cta-icone {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  .sementes-cta-conteudo > span {
+    font-size: 0.67rem;
+    letter-spacing: 2px;
+  }
+
+  .sementes-cta h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2.1rem, 11vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .sementes-cta p {
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .sementes-cta-botoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sementes-cta-botoes .sementes-btn {
+    width: 100%;
+    max-width: 310px;
+  }
 }
 
 /*== 850px ==*/
@@ -6495,6 +6686,118 @@ body.sementes-modal-aberto {
   }
 
   /* Página sementes */
+  .sementes-container {
+    width: 92%;
+  }
+
+  .sementes-hero {
+    min-height: 100vh;
+    padding: 130px 40px 80px;
+  }
+
+  .sementes-hero-conteudo {
+    max-width: 720px;
+  }
+
+  .sementes-hero h1 {
+    font-size: 5rem;
+  }
+
+  .sementes-hero h2 {
+    font-size: 1.05rem;
+    letter-spacing: 5px;
+  }
+
+  .sementes-hero p {
+    max-width: 650px;
+    font-size: 1rem;
+  }
+
+  .sementes-sobre,
+  .sementes-acoes,
+  .sementes-galeria {
+    padding: 90px 0;
+  }
+
+  .sementes-sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .sementes-sobre-imagem {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+  .sementes-sobre-imagem img {
+    min-height: 520px;
+  }
+
+  .sementes-sobre-detalhe {
+    right: -25px;
+  }
+
+  .sementes-sobre-texto {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sementes-sobre-texto > p {
+    text-align: left;
+  }
+
+  .sementes-acoes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .sementes-acao-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+    margin: 0 auto;
+  }
+
+  .sementes-acao-imagem {
+    height: 245px;
+  }
+
+  .sementes-impacto {
+    padding: 100px 0;
+    background-attachment: scroll;
+  }
+
+  .sementes-impacto-numeros {
+    gap: 18px;
+  }
+
+  .sementes-impacto-card {
+    min-height: 175px;
+    padding: 25px 15px;
+  }
+
+  .sementes-impacto-card strong {
+    font-size: 3.2rem;
+  }
+
+  .sementes-impacto-card span {
+    font-size: 0.82rem;
+  }
+
+  .sementes-galeria-grid {
+    grid-auto-rows: 230px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sementes-galeria-grande {
+    grid-row: span 2;
+  }
+
+  .sementes-cta {
+    padding: 95px 0;
+  }
+
+
 }
 
 /*== 1050px ==*/
@@ -7185,5 +7488,102 @@ body.sementes-modal-aberto {
   }
 
   /* Página sementes */
+  .sementes-container {
+    width: 92%;
+    max-width: 950px;
+  }
+
+  .sementes-hero {
+    min-height: 100vh;
+    padding: 135px 45px 85px;
+  }
+
+  .sementes-hero-conteudo {
+    max-width: 800px;
+  }
+
+  .sementes-hero h1 {
+    font-size: 5.5rem;
+  }
+
+  .sementes-hero p {
+    max-width: 700px;
+  }
+
+  .sementes-sobre,
+  .sementes-acoes,
+  .sementes-galeria {
+    padding: 95px 0;
+  }
+
+  .sementes-sobre-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+  }
+
+  .sementes-sobre-imagem img {
+    min-height: 520px;
+  }
+
+  .sementes-sobre-detalhe {
+    right: -20px;
+    width: 155px;
+    min-height: 145px;
+  }
+
+  .sementes-sobre-detalhe span {
+    font-size: 2.8rem;
+  }
+
+  .sementes-sobre-texto h2 {
+    font-size: 2.7rem;
+  }
+
+  .sementes-sobre-texto > p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .sementes-acoes-grid {
+    gap: 20px;
+  }
+
+  .sementes-acao-imagem {
+    height: 230px;
+  }
+
+  .sementes-acao-conteudo {
+    padding: 34px 22px 27px;
+  }
+
+  .sementes-acao-conteudo h3 {
+    font-size: 1.35rem;
+  }
+
+  .sementes-acao-resumo,
+  .sementes-acao-detalhes p {
+    font-size: 0.86rem;
+  }
+
+  .sementes-impacto {
+    padding: 105px 0;
+  }
+
+  .sementes-impacto-numeros {
+    gap: 20px;
+  }
+
+  .sementes-impacto-card {
+    min-height: 180px;
+    padding: 28px 18px;
+  }
+
+  .sementes-galeria-grid {
+    grid-auto-rows: 235px;
+  }
+
+  .sementes-cta {
+    padding: 100px 0;
+  }
 }
 
