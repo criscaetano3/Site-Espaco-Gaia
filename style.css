@@ -961,11 +961,12 @@ header {
 
 .hero-content h1 {
   font-size: 4.5rem;
-  line-height: 1;
+  line-height: 90px;
   margin: 25px 0;
   text-transform: uppercase;
   font-family: "TanBuste";
   letter-spacing: 5px;
+  
 }
 
 .hero-content p {
@@ -2361,7 +2362,7 @@ section {
   font-family: "TanBuste";
   font-size: clamp(2.7rem, 5vw, 5rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 100px;
   letter-spacing: 4px;
 }
 
@@ -3407,6 +3408,7 @@ section {
   font-family: "TanBuste", serif;
   letter-spacing: 4px;
   font-weight: normal;
+  
 }
 
 /* SUBTÍTULOS E TÍTULOS DOS CARDS */
@@ -3517,6 +3519,7 @@ button {
   margin: 0 auto 55px;
   text-align: center;
 }
+
 
 .sementes-titulo-section h2 {
   position: relative;
@@ -3657,7 +3660,7 @@ button {
   color: var(--sementes-branco);
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 600;
-  line-height: 1;
+  line-height: 120px;
 }
 
 .sementes-hero h1 strong {
@@ -4106,7 +4109,7 @@ button {
   color: var(--sementes-branco);
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 80px;
 }
 
 .sementes-impacto-texto p {
@@ -4481,7 +4484,7 @@ body.sementes-modal-aberto {
     display: inline-block;
     margin-bottom: 12px;
     color: var(--aldear-terracota);
-    font-family: "TamParadiso", cursive;
+    font-family: "TanParadiso", cursive;
     font-size: 1.3rem;
     letter-spacing: 2px;
 }
@@ -4679,7 +4682,7 @@ body.sementes-modal-aberto {
 .aldear-hero h1 {
     margin: 0;
     font-family: "Tanbuste", serif;
-    font-size: clamp(4rem, 9vw, 8rem);
+    font-size: 95px;
     font-weight: normal;
     line-height: 0.9;
     letter-spacing: 4px;
@@ -4696,8 +4699,8 @@ body.sementes-modal-aberto {
 .aldear-hero h2 {
     margin: 25px 0 15px;
     color: var(--aldear-terracota-claro);
-    font-family: "TamParadiso", cursive;
-    font-size: clamp(1.8rem, 4vw, 3.3rem);
+    font-family: "TanParadiso", cursive;
+    font-size: 50px;
     font-weight: normal;
     letter-spacing: 2px;
 }
@@ -4718,42 +4721,7 @@ body.sementes-modal-aberto {
     flex-wrap: wrap;
 }
 
-.aldear-hero-ods {
-    margin-top: 42px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.aldear-hero-ods > span {
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.aldear-hero-ods-icones {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.aldear-hero-ods-icones img {
-    width: 58px;
-    height: 58px;
-    border-radius: 7px;
-    object-fit: cover;
-    transition:
-        transform var(--aldear-transicao),
-        box-shadow var(--aldear-transicao);
-}
-
-.aldear-hero-ods-icones img:hover {
-    transform: translateY(-5px) scale(1.04);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
-}
 
 .aldear-scroll {
     width: 28px;
@@ -4856,9 +4824,9 @@ body.sementes-modal-aberto {
     margin: 0;
     color: var(--aldear-marrom-escuro);
     font-family: "Tanbuste", serif;
-    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-size: 50px;
     font-weight: normal;
-    line-height: 1.08;
+    line-height: 70px;
     letter-spacing: 4px;
 }
 
@@ -4877,7 +4845,7 @@ body.sementes-modal-aberto {
                    var(--aldear-radius-medio) 0;
     color: var(--aldear-marrom);
     background-color: var(--aldear-bege);
-    font-family: "TamParadiso", cursive;
+    font-family: "TanParadiso", cursive;
     font-size: 1.45rem;
     line-height: 1.55;
 }
@@ -4886,6 +4854,10 @@ body.sementes-modal-aberto {
 /* =========================================================
    PILARES
 ========================================================= */
+.aldear-titulo-central h2{
+  font-size: 50px;
+  line-height: 70px;
+}
 
 .aldear-pilares {
     padding: 110px 0;
@@ -4997,11 +4969,12 @@ body.sementes-modal-aberto {
     margin: 0 0 25px;
     color: var(--aldear-marrom-escuro);
     font-family: "Tanbuste", serif;
-    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    font-size: 50px;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 70px;
     letter-spacing: 4px;
 }
+
 
 .aldear-encontros-texto > p {
     margin: 0 0 32px;
@@ -5041,6 +5014,7 @@ body.sementes-modal-aberto {
     margin-bottom: 5px;
     color: var(--aldear-marrom);
     font-size: 1.1rem;
+    font-family: "TanParadiso";
 }
 
 .aldear-encontros-lista p {
@@ -5195,12 +5169,12 @@ body.sementes-modal-aberto {
 }
 
 .aldear-transformacao-conteudo h2 {
-    margin: 0 0 25px;
+    margin: 25px 0 25px;
     color: var(--aldear-marrom-escuro);
     font-family: "Tanbuste", serif;
-    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    font-size: 50px;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 70px;
     letter-spacing: 4px;
 }
 
@@ -5317,6 +5291,9 @@ body.sementes-modal-aberto {
     color: var(--aldear-terracota);
     font-weight: bold;
     letter-spacing: 1px;
+    
+    
+    
 }
 
 .aldear-ods-card h3 {
@@ -5526,23 +5503,23 @@ body.sementes-modal-aberto {
     display: block;
     margin-bottom: 15px;
     color: var(--aldear-bege);
-    font-family: "TamParadiso", cursive;
+    font-family: "TanParadiso", cursive;
     font-size: 1.5rem;
     letter-spacing: 2px;
 }
 
 .aldear-cta h2 {
-    margin: 0 0 22px;
+    margin: 25px 0 ;
     font-family: "Tanbuste", serif;
-    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    font-size: 50px;
     font-weight: normal;
-    line-height: 1.05;
+    line-height: 70px;
     letter-spacing: 4px;
 }
 
 .aldear-cta p {
     max-width: 680px;
-    margin: 0 auto;
+    margin: 35px 0 0;
     color: rgba(255, 255, 255, 0.86);
     font-size: 1.08rem;
     line-height: 1.8;
@@ -5695,6 +5672,7 @@ body.sementes-modal-aberto {
     font-weight: bold;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    font-family: "TanParadiso";
 }
 
 .aldear-section-ods-icones {
@@ -5758,6 +5736,7 @@ body.sementes-modal-aberto {
 .aldear-section-ods-claro
 .aldear-section-ods-titulo {
     color: var(--aldear-bege);
+    font-family: "TanParadiso";
 }
 
 .aldear-section-ods-claro
