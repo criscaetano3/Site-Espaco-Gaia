@@ -7510,6 +7510,1633 @@ body.sementes-modal-aberto {
     }
 }
 
+/* ==========================================================
+   RECRIA SALGUEIRO
+   ESPAÇO GAIA
+========================================================== */
+
+
+/* ==========================================================
+   FONTES
+========================================================== */
+
+@font-face {
+    font-family: "Tanbuste";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AristotelicaPro";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TamParadiso";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==========================================================
+   CORES
+========================================================== */
+
+:root {
+
+    --recria-verde: #58742f;
+
+    --recria-verde-escuro: #31451f;
+
+    --recria-verde-claro: #dce7c5;
+
+    --recria-amarelo: #f4c84c;
+
+    --recria-creme: #f7f2e7;
+
+    --recria-laranja: #b65a1e;
+
+    --recria-preto: #25251f;
+
+    --recria-branco: #ffffff;
+
+    --recria-sombra:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family:
+        "AristotelicaPro",
+        Arial,
+        sans-serif;
+
+    background:
+        var(--recria-creme);
+
+    color:
+        var(--recria-preto);
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+button,
+a {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    border: 0;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+.recria-container {
+
+    width: min(1180px, 90%);
+
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.recria-tag {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color:
+        var(--recria-laranja);
+
+}
+
+
+.recria-tag-clara {
+
+    color:
+        var(--recria-amarelo);
+
+}
+
+
+.recria-titulo-central {
+
+    width: min(760px, 100%);
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+
+}
+
+
+.recria-titulo-central h2,
+.recria-sobre h2,
+.recria-economia h2 {
+
+    font-family:
+        "Tanbuste",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(2.4rem, 4vw, 4.2rem);
+
+    font-weight: normal;
+
+    line-height: 1.08;
+
+    color:
+        var(--recria-verde-escuro);
+
+}
+
+
+.recria-titulo-central h2 span,
+.recria-sobre h2 span,
+.recria-economia h2 span {
+
+    color:
+        var(--recria-laranja);
+
+}
+
+
+.recria-titulo-central > p {
+
+    max-width: 650px;
+
+    margin:
+        20px auto 0;
+
+    font-size: 1.05rem;
+
+}
+
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
+
+.recria-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 30px;
+
+    border-radius: 50px;
+
+    background:
+        var(--recria-laranja);
+
+    color:
+        var(--recria-branco);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.recria-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.recria-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 92vh;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background:
+        var(--recria-verde-escuro);
+
+}
+
+
+.recria-hero-img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.recria-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(30, 44, 21, 0.94) 0%,
+
+            rgba(30, 44, 21, 0.75) 35%,
+
+            rgba(30, 44, 21, 0.38) 65%,
+
+            rgba(30, 44, 21, 0.10) 100%
+
+        );
+
+}
+
+
+.recria-hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(1180px, 90%);
+
+    margin:
+        0 auto;
+
+    padding:
+        170px 0 90px;
+
+    color:
+        white;
+
+}
+
+
+.recria-programa {
+
+    display: inline-block;
+
+    padding:
+        8px 17px;
+
+    margin-bottom:
+        22px;
+
+    border-radius:
+        50px;
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+    font-size:
+        0.76rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.recria-hero h1 {
+
+    max-width:
+        760px;
+
+    margin-bottom:
+        30px;
+
+    font-family:
+        "Tanbuste",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(4.5rem, 9vw, 8.5rem);
+
+    font-weight:
+        normal;
+
+    line-height:
+        0.85;
+
+}
+
+
+.recria-hero h1 span {
+
+    display:
+        block;
+
+    color:
+        var(--recria-amarelo);
+
+}
+
+
+.recria-hero p {
+
+    max-width:
+        600px;
+
+    margin-bottom:
+        35px;
+
+    font-size:
+        clamp(1.1rem, 2vw, 1.45rem);
+
+    line-height:
+        1.55;
+
+}
+
+
+/* ==========================================================
+   SOBRE
+========================================================== */
+
+.recria-sobre {
+
+    padding:
+        110px 0;
+
+    background:
+        var(--recria-creme);
+
+}
+
+
+.recria-sobre-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+
+}
+
+
+.recria-sobre-texto h2 {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.recria-sobre-texto p {
+
+    margin-bottom:
+        18px;
+
+    font-size:
+        1.04rem;
+
+    color:
+        #45453f;
+
+}
+
+
+.recria-sobre-imagem {
+
+    position:
+        relative;
+
+}
+
+
+.recria-sobre-imagem img {
+
+    height:
+        660px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        140px 20px 140px 20px;
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+.recria-img-detalhe {
+
+    position:
+        absolute;
+
+    left:
+        -35px;
+
+    bottom:
+        35px;
+
+    min-width:
+        280px;
+
+    padding:
+        20px 26px;
+
+    border-radius:
+        18px;
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+.recria-img-detalhe strong,
+.recria-img-detalhe span {
+
+    display:
+        block;
+
+}
+
+
+/* ==========================================================
+   PILARES
+========================================================== */
+
+.recria-pilares {
+
+    padding:
+        110px 0;
+
+    background:
+        white;
+
+}
+
+
+.recria-pilares-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        22px;
+
+}
+
+
+.recria-pilar {
+
+    position:
+        relative;
+
+    min-height:
+        350px;
+
+    padding:
+        36px 28px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        24px;
+
+    border:
+        1px solid rgba(49, 69, 31, 0.08);
+
+    background:
+        var(--recria-creme);
+
+    transition:
+        0.35s ease;
+
+}
+
+
+.recria-pilar:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+.recria-numero {
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    right:
+        20px;
+
+    font-family:
+        "Tanbuste",
+        serif;
+
+    font-size:
+        3.5rem;
+
+    color:
+        rgba(49, 69, 31, 0.10);
+
+}
+
+
+.recria-icone {
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        26px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+    font-size:
+        1.6rem;
+
+}
+
+
+.recria-pilar h3 {
+
+    margin-bottom:
+        13px;
+
+    color:
+        var(--recria-verde-escuro);
+
+    font-size:
+        1.3rem;
+
+    line-height:
+        1.3;
+
+}
+
+
+.recria-pilar p {
+
+    color:
+        #57574f;
+
+    font-size:
+        0.97rem;
+
+}
+
+
+/* ==========================================================
+   COMO FUNCIONA
+========================================================== */
+
+.recria-processo {
+
+    position:
+        relative;
+
+    padding:
+        110px 0;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--recria-verde-escuro);
+
+    color:
+        white;
+
+}
+
+
+.recria-processo::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        420px;
+
+    height:
+        420px;
+
+    top:
+        -210px;
+
+    right:
+        -150px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(244, 200, 76, 0.08);
+
+}
+
+
+.recria-processo .recria-container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.recria-processo .recria-titulo-central h2 {
+
+    color:
+        white;
+
+}
+
+
+.recria-processo .recria-titulo-central h2 span {
+
+    color:
+        var(--recria-amarelo);
+
+}
+
+
+.recria-processo .recria-titulo-central p {
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+}
+
+
+.recria-fluxo {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin:
+        55px auto;
+
+}
+
+
+.recria-etapa {
+
+    flex:
+        0 0 150px;
+
+    width:
+        150px;
+
+    min-height:
+        150px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        15px;
+
+    text-align:
+        center;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.20);
+
+    border-radius:
+        50%;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.recria-etapa:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--recria-amarelo);
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+}
+
+
+.recria-etapa span {
+
+    margin-bottom:
+        3px;
+
+    font-size:
+        0.78rem;
+
+    opacity:
+        0.75;
+
+}
+
+
+.recria-etapa strong {
+
+    font-size:
+        0.93rem;
+
+    line-height:
+        1.2;
+
+}
+
+
+.recria-seta {
+
+    flex-shrink:
+        0;
+
+    color:
+        var(--recria-amarelo);
+
+    font-size:
+        1.6rem;
+
+}
+
+
+.recria-processo-texto {
+
+    width:
+        min(900px, 100%);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.recria-processo-texto p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        rgba(255, 255, 255, 0.87);
+
+}
+
+
+/* ==========================================================
+   ECONOMIA VERDE
+========================================================== */
+
+.recria-economia {
+
+    padding:
+        110px 0;
+
+    background:
+        var(--recria-creme);
+
+}
+
+
+.recria-economia-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+
+}
+
+
+.recria-economia-imagem {
+
+    position:
+        relative;
+
+}
+
+
+.recria-economia-imagem::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        80%;
+
+    height:
+        85%;
+
+    left:
+        -18px;
+
+    bottom:
+        -18px;
+
+    border-radius:
+        20px 140px 20px 140px;
+
+    background:
+        var(--recria-amarelo);
+
+}
+
+
+.recria-economia-imagem img {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    height:
+        650px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        20px 140px 20px 140px;
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+.recria-economia-texto h2 {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.recria-economia-texto p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        #45453f;
+
+    font-size:
+        1.03rem;
+
+}
+
+
+/* ==========================================================
+   IMPACTO
+========================================================== */
+
+.recria-impacto {
+
+    padding:
+        110px 0;
+
+    background:
+        var(--recria-verde-claro);
+
+}
+
+
+.recria-impacto-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.recria-impacto article {
+
+    min-height:
+        270px;
+
+    padding:
+        35px 20px;
+
+    text-align:
+        center;
+
+    border-radius:
+        20px;
+
+    background:
+        white;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.recria-impacto article:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--recria-sombra);
+
+}
+
+
+.recria-impacto article > span {
+
+    width:
+        62px;
+
+    height:
+        62px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        700;
+
+}
+
+
+.recria-impacto h3 {
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--recria-verde-escuro);
+
+}
+
+
+.recria-impacto p {
+
+    color:
+        #5a5a53;
+
+    font-size:
+        0.95rem;
+
+}
+
+
+/* ==========================================================
+   GALERIA
+========================================================== */
+
+.recria-galeria {
+
+    padding:
+        110px 0;
+
+    background:
+        white;
+
+}
+
+
+.recria-galeria-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr 0.8fr;
+
+    grid-template-rows:
+        repeat(2, 280px);
+
+    gap:
+        15px;
+
+}
+
+
+.recria-foto {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        0;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        transparent;
+
+    cursor:
+        pointer;
+
+}
+
+
+.recria-foto img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        0.5s ease;
+
+}
+
+
+.recria-foto:hover img {
+
+    transform:
+        scale(1.06);
+
+    filter:
+        brightness(0.88);
+
+}
+
+
+.recria-foto::after {
+
+    content:
+        "+";
+
+    position:
+        absolute;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    color:
+        var(--recria-verde-escuro);
+
+    font-size:
+        1.5rem;
+
+    opacity:
+        0;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.recria-foto:hover::after {
+
+    opacity:
+        1;
+
+}
+
+
+.recria-foto-grande {
+
+    grid-row:
+        span 2;
+
+}
+
+
+.recria-foto-larga {
+
+    grid-column:
+        span 2;
+
+}
+
+
+/* ==========================================================
+   CTA FINAL
+========================================================== */
+
+.recria-cta {
+
+    position:
+        relative;
+
+    padding:
+        105px 20px;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    background:
+        var(--recria-laranja);
+
+    color:
+        white;
+
+}
+
+
+.recria-cta::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        400px;
+
+    height:
+        400px;
+
+    left:
+        -200px;
+
+    top:
+        -200px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+.recria-cta .recria-container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.recria-cta .recria-container > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.recria-cta h2 {
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto 20px;
+
+    font-family:
+        "Tanbuste",
+        serif;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4.7rem);
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.08;
+
+}
+
+
+.recria-cta h2 strong {
+
+    color:
+        var(--recria-amarelo);
+
+    font-weight:
+        normal;
+
+}
+
+
+.recria-cta p {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto 32px;
+
+}
+
+
+.recria-btn-claro {
+
+    background:
+        white;
+
+    color:
+        var(--recria-verde-escuro);
+
+}
+
+
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+.recria-lightbox {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        9999;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        30px;
+
+    background:
+        rgba(0, 0, 0, 0.92);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.recria-lightbox.ativo {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+
+}
+
+
+.recria-lightbox img {
+
+    width:
+        auto;
+
+    height:
+        auto;
+
+    max-width:
+        95%;
+
+    max-height:
+        90vh;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        15px;
+
+}
+
+
+.recria-lightbox-fechar {
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        30px;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color:
+        white;
+
+    font-size:
+        2.4rem;
+
+    cursor:
+        pointer;
+
+}
+
+
+/* ==========================================================
+   SELEÇÃO
+========================================================== */
+
+::selection {
+
+    background:
+        var(--recria-amarelo);
+
+    color:
+        var(--recria-verde-escuro);
+
+}
+
 /*== 850px ==*/
 @media (max-width: 850px) and (min-width: 751px) {
   .container {
@@ -9413,5 +11040,5 @@ body.sementes-modal-aberto {
     .aldear-galeria-grid {
         grid-auto-rows: 230px;
     }
-}
 
+ 
