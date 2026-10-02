@@ -1,0 +1,1288 @@
+/* Página programa ciclos */
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+:root {
+  --ciclos-roxo-principal: #5f259f;
+  --ciclos-roxo-escuro: #3e176c;
+  --ciclos-roxo-claro: #8d5cc7;
+  --ciclos-lilas: #efe5f8;
+  --ciclos-lilas-claro: #faf6fd;
+
+  --ciclos-verde: #5d8f4e;
+  --ciclos-verde-claro: #eaf3e7;
+
+  --ciclos-rosa: #d45d87;
+  --ciclos-rosa-claro: #fbeaf0;
+
+  --ciclos-amarelo: #f2c94c;
+
+  --ciclos-branco: #ffffff;
+  --ciclos-preto: #171717;
+  --ciclos-cinza-escuro: #3d3d3d;
+  --ciclos-cinza: #737373;
+  --ciclos-cinza-claro: #eeeeee;
+
+  --ciclos-sombra-suave: 0 12px 35px rgba(49, 20, 82, 0.12);
+
+  --ciclos-sombra-media: 0 18px 45px rgba(49, 20, 82, 0.18);
+
+  --ciclos-transicao: all 0.35s ease;
+
+  --ciclos-radius-pequeno: 10px;
+  --ciclos-radius-medio: 20px;
+  --ciclos-radius-grande: 32px;
+
+  --ciclos-largura-container: 1200px;
+}
+/* fontes */
+
+/* Títulos principais */
+
+.ciclos-premio-titulo,
+.ciclos-contato-titulo {
+  font-family: "TanBuste";
+}
+
+/* Subtítulos */
+
+.ciclos-subtitulo,
+.ciclos-hero-etiqueta,
+.ciclos-premio-etiqueta,
+.ciclos-contato-etiqueta,
+.ciclos-ods-titulo {
+  font-family: "TanParadiso";
+}
+
+/* Menu */
+
+.ciclos-menu-link,
+.ciclos-btn-header {
+  font-family: "AristotelicaPro";
+}
+
+/* Botões */
+
+.ciclos-btn,
+.ciclos-btn-principal,
+.ciclos-btn-secundario,
+.ciclos-btn-contato,
+.ciclos-btn-contato-secundario,
+.ciclos-voltar-projetos {
+  font-family: "AristotelicaPro";
+}
+
+/* Textos */
+
+.ciclos-hero-texto,
+.ciclos-texto-secao,
+.ciclos-descricao-secao,
+.ciclos-etapa-texto,
+.ciclos-premio-texto,
+.ciclos-contato-texto,
+.ciclos-footer-descricao,
+.ciclos-footer-lista a,
+.ciclos-footer-contatos,
+.ciclos-destaque-frase p,
+.ciclos-imagem-detalhe p,
+.ciclos-valor-conteudo p,
+.ciclos-galeria-legenda,
+.ciclos-ods-item span {
+  font-family: "AristotelicaPro";
+}
+
+/* Cards */
+
+.ciclos-etapa-titulo,
+.ciclos-valor-conteudo h3,
+.ciclos-footer-titulo {
+  font-family: "TanBuste";
+}
+
+.ciclos-hero-selo-texto {
+  font-family: "AristotelicaPro";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+}
+
+.ciclos-container {
+  width: min(90%, var(--ciclos-largura-container));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   BOTÕES GERAIS
+========================================================= */
+
+.ciclos-btn {
+  min-height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-btn-principal {
+  background-color: var(--ciclos-branco);
+  color: var(--ciclos-roxo-principal);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.ciclos-btn-principal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+}
+
+.ciclos-btn-secundario {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: var(--ciclos-branco);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.ciclos-btn-secundario:hover {
+  background-color: var(--ciclos-branco);
+  color: var(--ciclos-roxo-principal);
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ciclos-hero {
+  min-height: 100vh;
+  padding: 130px 0 70px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    rgba(52, 17, 91, 0.97),
+    rgba(95, 37, 159, 0.9),
+    rgba(155, 82, 194, 0.84)
+  );
+}
+
+.ciclos-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.13),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      rgba(255, 255, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.ciclos-hero-decoracao {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.ciclos-hero-decoracao-um {
+  top: -150px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.ciclos-hero-decoracao-dois {
+  bottom: -190px;
+  left: -120px;
+  width: 460px;
+  height: 460px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ciclos-hero-container {
+  position: relative;
+  z-index: 2;
+  width: min(90%, var(--ciclos-largura-container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.ciclos-hero-conteudo {
+  color: var(--ciclos-branco);
+}
+
+.ciclos-hero-etiqueta {
+  margin-bottom: 18px;
+  padding: 9px 18px;
+  display: inline-flex;
+  background-color: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: var(--ciclos-branco);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.ciclos-hero-titulo {
+  max-width: 690px;
+  color: var(--ciclos-branco);
+  font-family: "TanBuste";
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 100px;
+  letter-spacing: 4px;
+}
+
+.ciclos-hero-titulo span {
+  display: block;
+  color: #e9cf63;
+}
+
+.ciclos-hero-texto {
+  max-width: 650px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.ciclos-hero-botoes {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ciclos-hero-ods {
+  margin-top: 35px;
+}
+
+.ciclos-hero-ods-texto {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.ciclos-hero-ods-lista {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ciclos-hero-ods-img {
+  width: 67px;
+  height: 67px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-hero-ods-img:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.ciclos-hero-imagem-area {
+  position: relative;
+}
+
+.ciclos-hero-imagem-moldura {
+  position: relative;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--ciclos-radius-grande);
+  box-shadow: 0 28px 70px rgba(22, 5, 44, 0.34);
+  transform: rotate(2deg);
+}
+
+.ciclos-hero-imagem {
+  width: 100%;
+  min-height: 510px;
+  max-height: 620px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.ciclos-hero-imagem-legenda {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  padding: 13px 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background-color: rgba(255, 255, 255, 0.94);
+  color: var(--ciclos-roxo-escuro);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.ciclos-hero-imagem-legenda i {
+  color: var(--ciclos-rosa);
+}
+
+.ciclos-hero-selo {
+  position: absolute;
+  top: -35px;
+  right: -32px;
+  width: 145px;
+  height: 145px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--ciclos-amarelo);
+  color: var(--ciclos-roxo-escuro);
+  border: 8px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(25, 6, 48, 0.25);
+  transform: rotate(-8deg);
+}
+
+.ciclos-hero-selo-numero {
+  font-family: "TanParadiso";
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ciclos-hero-selo-texto {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ciclos-rolar {
+  position: absolute;
+  left: 50%;
+  bottom: 23px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75rem;
+  transform: translateX(-50%);
+}
+
+.ciclos-rolar i {
+  animation: ciclos-seta-rolar 1.6s infinite;
+}
+
+@keyframes ciclos-seta-rolar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* =========================================================
+   TEXTOS DAS SEÇÕES
+========================================================= */
+
+.ciclos-subtitulo {
+  margin-bottom: 12px;
+  display: inline-block;
+  color: var(--ciclos-roxo-principal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.ciclos-titulo-secao {
+  color: var(--ciclos-preto);
+  font-family: "TanBuste";
+  font-size: clamp(2rem, 3.3vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 4px;
+}
+
+.ciclos-titulo-secao span {
+  color: var(--ciclos-roxo-principal);
+}
+
+.ciclos-texto-secao {
+  margin-top: 20px;
+  color: var(--ciclos-cinza);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.ciclos-descricao-secao {
+  max-width: 760px;
+  margin: 20px auto 0;
+  color: var(--ciclos-cinza);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ciclos-cabecalho-secao {
+  margin-bottom: 55px;
+}
+
+.ciclos-cabecalho-centralizado {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* =========================================================
+   SEÇÃO CUIDADO E ANCESTRALIDADE
+========================================================= */
+
+.ciclos-cuidado {
+  padding: 115px 0;
+  background-color: var(--ciclos-branco);
+}
+
+.ciclos-secao-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.ciclos-secao-grid-invertido {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.ciclos-secao-imagem-area {
+  position: relative;
+}
+
+.ciclos-imagem-destaque {
+  position: relative;
+}
+
+.ciclos-imagem-destaque::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 170px;
+  height: 170px;
+  background-color: var(--ciclos-lilas);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.ciclos-imagem-principal {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 570px;
+  max-height: 680px;
+  object-fit: cover;
+  border-radius: var(--ciclos-radius-grande);
+  box-shadow: var(--ciclos-sombra-media);
+}
+
+.ciclos-credito-imagem {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  z-index: 2;
+  padding: 7px 12px;
+  background-color: rgba(255, 255, 255, 0.86);
+  color: var(--ciclos-cinza-escuro);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.ciclos-imagem-detalhe {
+  position: absolute;
+  right: -42px;
+  bottom: 45px;
+  z-index: 3;
+  width: 255px;
+  padding: 24px;
+  background-color: var(--ciclos-roxo-principal);
+  color: var(--ciclos-branco);
+  border-radius: var(--ciclos-radius-medio);
+  box-shadow: var(--ciclos-sombra-media);
+}
+
+.ciclos-imagem-detalhe i {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  color: var(--ciclos-amarelo);
+}
+
+.ciclos-imagem-detalhe p {
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.ciclos-imagem-detalhe-direita {
+  right: auto;
+  left: -42px;
+}
+
+.ciclos-destaque-frase {
+  position: relative;
+  margin-top: 30px;
+  padding: 24px 25px 24px 55px;
+  background-color: var(--ciclos-lilas-claro);
+  border-left: 5px solid var(--ciclos-roxo-principal);
+  border-radius: 0 var(--ciclos-radius-pequeno) var(--ciclos-radius-pequeno) 0;
+}
+
+.ciclos-destaque-aspas {
+  position: absolute;
+  top: 3px;
+  left: 18px;
+  color: var(--ciclos-roxo-claro);
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.ciclos-destaque-frase p {
+  color: var(--ciclos-roxo-escuro);
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ODS
+========================================================= */
+
+.ciclos-ods {
+  margin-top: 35px;
+}
+
+.ciclos-ods-titulo {
+  margin-bottom: 16px;
+  color: var(--ciclos-roxo-escuro);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ciclos-ods-lista {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.ciclos-ods-item {
+  width: 112px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+  text-align: center;
+}
+
+.ciclos-ods-imagem {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(40, 24, 54, 0.13);
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-ods-item:hover .ciclos-ods-imagem {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 25px rgba(40, 24, 54, 0.2);
+}
+
+.ciclos-ods-item span {
+  color: var(--ciclos-cinza);
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ciclos-ods-centralizada {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ciclos-ods-centralizada .ciclos-ods-lista {
+  justify-content: center;
+}
+
+.ciclos-ods-clara .ciclos-ods-titulo {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ciclos-ods-clara .ciclos-ods-item span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================================================
+   COMO FUNCIONA
+========================================================= */
+
+.ciclos-funcionamento {
+  padding: 115px 0;
+  background-color: var(--ciclos-lilas-claro);
+}
+
+.ciclos-etapas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.ciclos-etapa-card {
+  position: relative;
+  min-height: 355px;
+  padding: 38px 28px 30px;
+  background-color: var(--ciclos-branco);
+  border: 1px solid rgba(95, 37, 159, 0.08);
+  border-radius: var(--ciclos-radius-medio);
+  box-shadow: var(--ciclos-sombra-suave);
+  overflow: hidden;
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-etapa-card::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -55px;
+  width: 125px;
+  height: 125px;
+  background-color: var(--ciclos-lilas);
+  border-radius: 50%;
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-etapa-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(95, 37, 159, 0.2);
+  box-shadow: var(--ciclos-sombra-media);
+}
+
+.ciclos-etapa-card:hover::after {
+  transform: scale(1.22);
+}
+
+.ciclos-etapa-numero {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  color: rgba(95, 37, 159, 0.1);
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.ciclos-etapa-icone {
+  position: relative;
+  z-index: 2;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ciclos-lilas);
+  color: var(--ciclos-roxo-principal);
+  border-radius: 18px;
+  font-size: 1.7rem;
+}
+
+.ciclos-etapa-titulo {
+  position: relative;
+  z-index: 2;
+  color: var(--ciclos-preto);
+  font-family: "TanBuste";
+  letter-spacing: 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.ciclos-etapa-texto {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  color: var(--ciclos-cinza);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   PRÊMIO
+========================================================= */
+
+.ciclos-premio {
+  padding: 100px 0;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    var(--ciclos-roxo-escuro),
+    var(--ciclos-roxo-principal)
+  );
+}
+
+.ciclos-premio-fundo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(255, 255, 255, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(242, 201, 76, 0.12),
+      transparent 30%
+    );
+}
+
+.ciclos-premio-conteudo {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.35fr 1.65fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.ciclos-premio-icone-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ciclos-premio-circulo {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ciclos-amarelo);
+  color: var(--ciclos-roxo-escuro);
+  border: 12px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+  font-size: 4.4rem;
+  box-shadow: 0 22px 50px rgba(28, 4, 52, 0.32);
+}
+
+.ciclos-premio-ano {
+  margin-top: 18px;
+  color: var(--ciclos-branco);
+  font-family: "TanBuste";
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.ciclos-premio-etiqueta {
+  margin-bottom: 10px;
+  display: inline-block;
+  color: var(--ciclos-amarelo);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ciclos-premio-titulo {
+  color: var(--ciclos-branco);
+  font-family: "TanBuste";
+  letter-spacing: 4px;
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.ciclos-premio-texto {
+  max-width: 820px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.ciclos-premio-destaques {
+  margin-top: 32px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ciclos-premio-destaque-item {
+  min-width: 190px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  color: var(--ciclos-branco);
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.ciclos-premio-destaque-item i {
+  color: var(--ciclos-amarelo);
+  font-size: 1.2rem;
+}
+
+/* =========================================================
+   REPLICÁVEL E POTENTE
+========================================================= */
+
+.ciclos-potente {
+  padding: 120px 0;
+  background-color: var(--ciclos-branco);
+}
+
+.ciclos-valores {
+  margin-top: 35px;
+  display: grid;
+  gap: 18px;
+}
+
+.ciclos-valor-item {
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: var(--ciclos-lilas-claro);
+  border-radius: 14px;
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-valor-item:hover {
+  transform: translateX(8px);
+  background-color: var(--ciclos-lilas);
+}
+
+.ciclos-valor-icone {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ciclos-roxo-principal);
+  color: var(--ciclos-branco);
+  border-radius: 14px;
+  font-size: 1.25rem;
+}
+
+.ciclos-valor-conteudo h3 {
+  color: var(--ciclos-preto);
+  font-family: "TanParadiso";
+  font-size: 1rem;
+}
+
+.ciclos-valor-conteudo p {
+  margin-top: 3px;
+  color: var(--ciclos-cinza);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   DIREITOS E JUSTIÇA SOCIAL
+========================================================= */
+
+.ciclos-direitos {
+  padding: 105px 0;
+  background: linear-gradient(
+    120deg,
+    rgba(55, 18, 91, 0.98),
+    rgba(95, 37, 159, 0.95)
+  );
+}
+
+.ciclos-direitos-conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: flex-start;
+  gap: 45px;
+}
+
+.ciclos-direitos-icone {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ciclos-amarelo);
+  color: var(--ciclos-roxo-escuro);
+  border-radius: 40px 40px 40px 5px;
+  font-size: 3.4rem;
+  box-shadow: 0 20px 45px rgba(28, 4, 52, 0.3);
+}
+
+.ciclos-direitos-texto .ciclos-subtitulo {
+  color: var(--ciclos-amarelo);
+}
+
+.ciclos-direitos-texto .ciclos-titulo-secao {
+  color: var(--ciclos-branco);
+}
+
+.ciclos-direitos-texto .ciclos-titulo-secao span {
+  color: var(--ciclos-amarelo);
+}
+
+.ciclos-direitos-texto .ciclos-texto-secao {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.ciclos-galeria {
+  padding: 115px 0;
+  background-color: var(--ciclos-lilas-claro);
+}
+
+.ciclos-galeria-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-rows: 260px 260px;
+  gap: 20px;
+}
+
+.ciclos-galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--ciclos-radius-medio);
+  box-shadow: var(--ciclos-sombra-suave);
+}
+
+.ciclos-galeria-item-grande {
+  grid-row: span 2;
+}
+
+.ciclos-galeria-item-horizontal {
+  grid-column: span 2;
+}
+
+/* Link ocupa todo o card */
+.ciclos-lightbox-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ciclos-galeria-imagem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+/* Escurecimento da imagem */
+.ciclos-galeria-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(to top, rgba(25, 7, 45, 0.75), transparent 55%);
+}
+
+.ciclos-galeria-item:hover .ciclos-galeria-imagem {
+  transform: scale(1.08);
+}
+
+.ciclos-galeria-legenda {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  z-index: 2;
+
+  color: var(--ciclos-branco);
+
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.ciclos-lightbox {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+
+  z-index: 9999;
+}
+
+.ciclos-lightbox.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ciclos-lightbox-img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 75vw;
+  max-height: 75vh;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+  animation: zoomImagem 0.3s;
+}
+
+@keyframes zoomImagem {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ciclos-lightbox-fechar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+
+  color: #ffffff;
+
+  font-size: 55px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.ciclos-lightbox-fechar:hover {
+  color: #f2c94c;
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   CONTATO / CHAMADA PARA AÇÃO
+========================================================= */
+
+.ciclos-contato {
+  padding: 105px 0;
+  overflow: hidden;
+  background-color: var(--ciclos-roxo-principal);
+}
+
+.ciclos-contato-decoracao {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.ciclos-contato-decoracao-um {
+  top: -180px;
+  left: -100px;
+  width: 420px;
+  height: 420px;
+}
+
+.ciclos-contato-decoracao-dois {
+  right: -130px;
+  bottom: -210px;
+  width: 500px;
+  height: 500px;
+}
+
+.ciclos-contato-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--ciclos-branco);
+  text-align: center;
+}
+
+.ciclos-contato-etiqueta {
+  margin-bottom: 14px;
+  display: inline-block;
+  color: var(--ciclos-amarelo);
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.ciclos-contato-titulo {
+  color: var(--ciclos-branco);
+  font-family: "TanBuste";
+  letter-spacing: 4px;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.ciclos-contato-texto {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ciclos-contato-botoes {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ciclos-btn-contato {
+  background-color: #25d366;
+  color: var(--ciclos-branco);
+  box-shadow: 0 12px 28px rgba(15, 83, 39, 0.28);
+}
+
+.ciclos-btn-contato:hover {
+  background-color: #1ebc59;
+  transform: translateY(-4px);
+}
+
+.ciclos-btn-contato-secundario {
+  background-color: var(--ciclos-branco);
+  color: var(--ciclos-roxo-principal);
+}
+
+.ciclos-btn-contato-secundario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(28, 4, 52, 0.22);
+}
+
+.ciclos-voltar-projetos {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: var(--ciclos-transicao);
+}
+
+.ciclos-voltar-projetos:hover {
+  color: var(--ciclos-amarelo);
+  transform: translateX(-5px);
+}
+
+/* =========================================================
+   ANIMAÇÕES DE ENTRADA
+========================================================= */
+
+[data-ciclos-animacao] {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+[data-ciclos-animacao="esquerda"] {
+  transform: translateX(-60px);
+}
+
+[data-ciclos-animacao="direita"] {
+  transform: translateX(60px);
+}
+
+[data-ciclos-animacao="cima"] {
+  transform: translateY(55px);
+}
+
+[data-ciclos-animacao].ciclos-animacao-ativa {
+  opacity: 1;
+  transform: translate(0);
+}

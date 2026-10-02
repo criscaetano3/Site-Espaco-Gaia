@@ -1,0 +1,191 @@
+/* Página Doação */
+/* hero */
+.hero-doacao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  gap: 40px;
+  background: #ebddcc;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TEXTO */
+
+.text-doacao {
+  width: 50%;
+  z-index: 3;
+  padding: 0 0 0 20px;
+}
+
+.tag {
+  color: #b65a1e;
+  font-family: "AristotelicaPro";
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.text-doacao h1 {
+  font-size: 35px;
+  line-height: 1.1;
+  margin: 20px 0;
+  color: #642435;
+  font-family: "TanBuste";
+}
+
+.text-doacao p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #222;
+  max-width: 600px;
+  font-family: "AristotelicaPro";
+}
+
+.frase {
+  color: #b65a1e;
+  font-family: "AristotelicaPro";
+  font-weight: 600;
+}
+
+/* IMAGEM */
+
+.doacao-img {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.doacao-img img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* EFEITO FADE */
+
+.doacao-img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    #ebddcc 0%,
+    rgba(235, 221, 204, 0.95) 20%,
+    rgba(235, 221, 204, 0.8) 40%,
+    rgba(235, 221, 204, 0.3) 70%,
+    transparent 100%
+  );
+}
+
+/* PIX */
+
+.pix {
+  padding: 40px 0;
+}
+
+.pix-container {
+  display: flex;
+  background: #ebddcc;
+  border-radius: 20px;
+  margin: 0 80px 0 80px;
+}
+
+.pix-box,
+.ajuda-box {
+  padding: 40px;
+  flex: 1;
+}
+
+.pix-box h2,
+.ajuda-box h2 {
+  margin-bottom: 30px;
+  color: #642435;
+  font-family: "tanParadiso";
+}
+
+.pix-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.pix-content img {
+  width: 220px;
+}
+
+.pix-info p {
+  margin-bottom: 20px;
+  font-family: "AristotelicaPro";
+}
+
+.pix-info h4 {
+  color: #b65a1e;
+  margin-bottom: 10px;
+  font-family: "AristotelicaPro";
+}
+
+.pix-chave {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-family: "AristotelicaPro";
+}
+
+.ajuda-item {
+  margin-bottom: 30px;
+  font-family: "AristotelicaPro";
+  display: flex;
+  gap: 1rem;
+}
+.ajuda-item div img {
+  border-radius: 50%;
+}
+
+.ajuda-item h3 {
+  color: #b65a1e;
+  margin-bottom: 10px;
+  font-family: "AristotelicaPro";
+}
+
+.btn-whats {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 15px;
+  background: #b65a1e;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "AristotelicaPro";
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-whats img {
+  width: 20px;
+}
+
+.btn-whats:hover {
+  background: #ff8635;
+  transform: translateY(-3px);
+}

@@ -1,0 +1,593 @@
+/* style pagina observatório Itaoca */
+
+.hero-observatorio {
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(6, 36, 2, 0.81), rgba(0, 51, 5, 0.56)),
+    url("imagem/galeria-observatorio/observatorio01.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content span {
+  color: #f2b37e;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  line-height: 90px;
+  margin: 25px 0;
+  text-transform: uppercase;
+  font-family: "TanBuste";
+  letter-spacing: 5px;
+  
+}
+
+.hero-content p {
+  font-size: 25px;
+  font-family: "TanParadiso";
+  text-align:center;
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.hero-botoes a {
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-botoes a:first-child {
+  background: #b65a1e;
+  color: white;
+}
+
+.hero-botoes a:last-child {
+  border: 1px solid white;
+  color: white;
+}
+
+/* SOBRE */
+
+.sobre-observatorio {
+  padding: 50px 0;
+  background: #fff7ef;
+  min-height: 100vh;
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.sobre-texto span,
+.tecnologia-social span {
+  color: #b65a1e;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sobre-texto h2,
+.tecnologia-social h2 {
+  font-size: 2.7rem;
+  line-height: 1.2;
+  color: #b65a1e;
+  margin: 18px 0;
+  font-family: "TanBuste";
+  letter-spacing: 5px;
+}
+.sobre-texto h3{
+  font-family: "TanParadiso";
+  color: #b65a1e; 
+  padding: 10px 0;
+}
+
+.sobre-texto p,
+.tecnologia-social p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-family: "AristotelicaPro";
+}
+
+.sobre-img img {
+  width: 450px;
+  height: 500px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* COMO ATUAMOS */
+
+.atuacao {
+  padding: 50px 20px;
+  background: #f8f1e8;
+  text-align: center;
+  min-height: 350px;
+}
+
+.atuacao .contai, .conta {
+  display: block;
+}
+
+.atuacao h2,
+.timeline h2,
+.galeria h2 {
+  color: #b65a1e;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "TanBuste";
+  letter-spacing: 5px;
+}
+
+.atuacao-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.atuacao-card {
+  background: #fffaf5;
+  padding: 15px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.atuacao-card:hover {
+  transform: translateY(-8px);
+}
+
+.atuacao-card h3 {
+  color: #642435;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "tanParadiso";
+  letter-spacing: 5px;
+}
+
+.atuacao-card p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  font-family: "AristotelicaPro";
+}
+
+/* TIMELINE */
+
+.timeline {
+  padding: 50px 20px;
+  background: #fff7ef;
+  text-align: center;
+  min-height: 350px;
+}
+
+.timeline .container {
+  display: grid;
+  justify-content: center;
+}
+
+.timeline-lista {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.timeline-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 18px;
+  text-align: center;
+  border-top: 5px solid #b65a1e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-item h3 {
+  color: #b65a1e;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: "tanParadiso";
+}
+
+.timeline-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: "AristotelicaPro";
+}
+
+/* IMPACTO */
+
+.impacto-observatorio {
+  background: #ebddcc;
+  padding: 60px 0;
+  color: #a34c1b;
+  min-height: 114px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 20px 0;
+}
+
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.impacto-grid div {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.impacto-grid div:last-child {
+  border-right: none;
+}
+
+.impacto-grid h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: "tanParadiso";
+}
+
+.impacto-grid p {
+  font-size: 0.95rem;
+  font-family: "AristotelicaPro";
+}
+
+/* GALERIA */
+
+.galeria {
+  min-height: 400px;
+  padding: 80px 0 120px;
+  background: #f8f1e8;
+  position: relative;
+  z-index: 5;
+}
+
+.galeria .container {
+  display: block;
+}
+
+.galeria h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4a2b;
+  margin-bottom: 40px;
+  font-family: "tanBuste";
+  letter-spacing: 5px;
+}
+
+.galeria-swiper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 50px 50px;
+  overflow: hidden;
+}
+
+.galeria-swiper .swiper-wrapper {
+  display: flex;
+}
+
+.galeria-swiper .swiper-slide {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.galeria-swiper .swiper-slide img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* abrir foros galeria */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.lightbox.ativo {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.fechar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.swiper-slide img {
+  cursor: pointer;
+}
+
+/* Setas da Lightbox */
+
+.anterior,
+.proximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.anterior:hover,
+.proximo:hover {
+  color: #b65a1e;
+}
+
+.anterior {
+  left: 30px;
+}
+
+.proximo {
+  right: 30px;
+}
+/* TECNOLOGIA SOCIAL */
+
+.tecnologia-social {
+  padding: 20px 0;
+  background: #fff7ef;
+  min-height: 90vh;
+}
+
+.tecnologia-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.tecnologia-grid .con {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.a {
+  width: 100%;
+  text-align: center;
+}
+
+.tecnologia-social .img-tec{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.tecnologia-social .img-tec img {
+  width: 400px;
+  height: 500px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  text align: center;
+}
+
+.tecnologia-social a {
+  display: inline-block;
+  margin-top: 20px;
+  background: #b65a1e;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tecnologia-grid h3{
+  font-family: "TanParadiso";
+  color: #b65a1e; 
+  padding: 10px 0;
+}
+
+/* reconhecimento */
+.reconhecimento {
+  min-width: 100%;
+  min-height: 500px;
+}
+.reconhecimento .reco-text h2 {
+  color: #b65a1e;
+  margin-bottom: 45px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "TanBuste";
+  text-align: center;
+  padding: 40px 0;
+  letter-spacing: 5px;
+}
+.reconhecimento .reco-text p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-family: "AristotelicaPro";
+  padding: 0 15px;
+}
+.reconhecimento .container-reco {
+  display: flex;
+  padding: 10px 10px;
+}
+.paragrafo {
+  width: 50%;
+  gap: 2rem;
+}
+.paragrafo .p {
+  font-size: 20px;
+}
+
+.reconhecimento .container-reco .container-img img {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+.img-p {
+  display: flex;
+  align-items: center;
+}
+.img-p p {
+  font-family: "ArostotelicaPro";
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* CTA */
+
+.cta-observatorio {
+  background: linear-gradient(135deg, #b65a1e, #642435);
+  color: white;
+  padding: 60px 0;
+  min-height: 200px;
+}
+
+.cta-observatorio .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cta-observatorio h2 {
+  font-size: 1.5rem;
+  font-family: "TanBuste";
+  letter-spacing: 5px;
+}
+
+.cta-observatorio p {
+  margin-top: 10px;
+}
+
+.cta-observatorio a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: white;
+  color: #642435;
+}
+
+/* ODS */
+.ods-hero{
+    margin-top:35px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+}
+
+.ods-hero .span-ODS{
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(255, 255, 255);
+  font-size: 0.86rem;
+  letter-spacing: -0.50px;
+
+}
+
+.ods-hero .ods-icones{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.ods-hero img{
+    width:70px;
+    height:70px;
+}
+
+.ods {
+  width: 100%;
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding: 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ods span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  color: rgb(53, 1, 39);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.ods-icones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ods-icones img {
+  width: 78px;
+  height: 78px;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.ods-icones img:hover {
+  transform: translateY(-4px);
+}

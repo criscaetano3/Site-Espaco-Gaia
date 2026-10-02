@@ -1,0 +1,131 @@
+/* Página Sobre */
+.sobre-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.organizacao {
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.text h2 {
+  font-size: 30px;
+  color: #642435;
+  font-family: "TanBuste";
+}
+.text p {
+  color: #1d3e30;
+  font-size: 20px;
+}
+
+.imagem-pag {
+  text-align: center;
+}
+
+.imagem-pag img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  border: 5px solid #b65a1e;
+
+  margin-top: 100px;
+}
+
+.historia-content {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.historia-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.sobre-cont {
+  background: #d6c3a3;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
+.missao-cont {
+  background: #ebddcc;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.visao-cont {
+  background: #edbf8d;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.valores-cont {
+  background: #b17253;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.sobre-cont:hover,
+.missao-cont:hover,
+.visao-cont:hover,
+.valores-cont:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-cont h2 {
+  font-family: "TanParadiso";
+  color: #642435;
+}
+.missao-cont h2 {
+  color: #a34c1b;
+  font-family: "TanParadiso";
+}
+.visao-cont h2 {
+  color: #455543;
+  font-family: "TanParadiso";
+}
+.valores-cont h2 {
+  color: #ebddcc;
+  font-family: "TanParadiso";
+}
+.sobre-cont p,
+.missao-cont p,
+.visao-cont p,
+.valores-cont p {
+  color: #000;
+}
+
+.section-faixa {
+  width: 100%;
+  height: 150px;
+}
+.faixa-logo {
+  width: 100%;
+  height: 150px;
+}
+
+.faixa-logo img {
+  width: 100%;
+  height: 100%;
+}

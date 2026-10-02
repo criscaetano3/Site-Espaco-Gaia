@@ -1,0 +1,537 @@
+/* pagina linha do tempo */
+/* HERO DA PÁGINA */
+.ldt-hero {
+  width: 100%;
+  min-height: 90vh;
+  padding: 100px 40px 80px;
+
+  background:
+    linear-gradient(rgba(6, 36, 2, 0.78), rgba(0, 51, 5, 0.68)),
+    url("imagem/itaoca-84.jpg") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ldt-hero-conteudo {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+.ldt-hero-tag {
+  display: block;
+
+  color: #edbf8d;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.ldt-hero-titulo {
+  margin: 25px 0 20px;
+
+  color: #ebddcc;
+  font-family: "TanBuste", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.1;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.ldt-hero-texto {
+  max-width: 760px;
+  margin: 0 auto 35px;
+
+  color: #ebddcc;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.ldt-hero-botao {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background: #b65a1e;
+  color: #ffffff;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  transition: transform 0.3s ease;
+}
+
+.ldt-hero-botao:hover {
+  background: #642435;
+  transform: translateY(-4px);
+}
+
+/* ==================================================
+   APRESENTAÇÃO
+================================================== */
+
+.ldt-apresentacao {
+  width: 100%;
+  padding: 90px 30px;
+
+  background: #fff7ef;
+  text-align: center;
+}
+
+.ldt-apresentacao-conteudo {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.ldt-secao-tag {
+  display: block;
+
+  color: #b65a1e;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.ldt-secao-titulo {
+  margin: 18px 0 20px;
+
+  color: #642435;
+  font-family: "TanBuste", sans-serif;
+  font-size: 2.7rem;
+  line-height: 1.3;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.ldt-apresentacao-texto {
+  color: #1d3e30;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* ==================================================
+   NOSSO TERRITÓRIO
+================================================== */
+
+.ldt-territorio {
+  width: 100%;
+  padding: 90px 40px;
+
+  background: #ebddcc;
+}
+
+.ldt-territorio-conteudo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+
+  align-items: center;
+}
+
+.ldt-territorio-texto h2 {
+  margin: 18px 0 22px;
+
+  color: #642435;
+  font-family: "TanBuste", sans-serif;
+  font-size: 2.6rem;
+  line-height: 1.3;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.ldt-territorio-texto p {
+  margin-bottom: 18px;
+
+  color: #222222;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.ldt-territorio-dados {
+  width: 100%;
+  padding: 40px 35px;
+
+  background: #ffffff;
+  border-left: 8px solid #b65a1e;
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ldt-territorio-dados h3 {
+  margin-bottom: 25px;
+
+  color: #b65a1e;
+  font-family: "TanParadiso", sans-serif;
+  font-size: 1.8rem;
+}
+
+.ldt-territorio-lista {
+  list-style: none;
+}
+
+.ldt-territorio-lista li {
+  margin-bottom: 18px;
+  padding-left: 25px;
+
+  position: relative;
+
+  color: #1d3e30;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.ldt-territorio-lista li:last-child {
+  margin-bottom: 0;
+}
+
+.ldt-territorio-lista li::before {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  background: #b65a1e;
+  border-radius: 50%;
+}
+
+/* ==================================================
+   CABEÇALHO DA LINHA DO TEMPO
+================================================== */
+
+.ldt-trajetoria {
+  width: 100%;
+  padding: 90px 25px;
+
+  background: #fff7ef;
+}
+
+.ldt-trajetoria-cabecalho {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.ldt-trajetoria-cabecalho p {
+  color: #455543;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   ESTRUTURA DA LINHA DO TEMPO
+================================================== */
+
+.ldt-eixo {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.ldt-eixo::before {
+  content: "";
+
+  width: 6px;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  background: #b65a1e;
+  border-radius: 50px;
+
+  transform: translateX(-50%);
+}
+
+/* ANO */
+
+.ldt-ano {
+  width: 160px;
+  margin: 60px auto;
+  padding: 16px 15px;
+
+  position: relative;
+  z-index: 3;
+
+  background: #455543;
+  color: #ebddcc;
+
+  border: 5px solid #fff7ef;
+  border-radius: 50px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ldt-ano:first-child {
+  margin-top: 0;
+}
+
+.ldt-ano h3 {
+  color: #ebddcc;
+  font-family: "TanBuste", sans-serif;
+  font-size: 1.8rem;
+
+  letter-spacing: 3px;
+}
+
+/* MARCOS */
+
+.ldt-marco {
+  width: 45%;
+  margin-bottom: 42px;
+
+  position: relative;
+}
+
+.ldt-marco-esquerda {
+  margin-right: auto;
+  padding-right: 45px;
+}
+
+.ldt-marco-direita {
+  margin-left: auto;
+  padding-left: 45px;
+}
+
+/* PONTO NO EIXO */
+
+.ldt-marco::before {
+  content: "";
+
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  top: 36px;
+  z-index: 4;
+
+  background: #edbf8d;
+  border: 5px solid #455543;
+  border-radius: 50%;
+}
+
+.ldt-marco-esquerda::before {
+  right: -11px;
+}
+
+.ldt-marco-direita::before {
+  left: -11px;
+}
+
+/* LINHA ENTRE CARD E EIXO */
+
+.ldt-marco::after {
+  content: "";
+
+  width: 45px;
+  height: 3px;
+
+  position: absolute;
+  top: 46px;
+
+  background: #b65a1e;
+}
+
+.ldt-marco-esquerda::after {
+  right: 0;
+}
+
+.ldt-marco-direita::after {
+  left: 0;
+}
+
+/* CARD */
+
+.ldt-marco-card {
+  width: 100%;
+  min-height: 190px;
+  padding: 28px;
+
+  position: relative;
+
+  background: #ffffff;
+  border-top: 6px solid #b65a1e;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ldt-marco-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.14);
+}
+
+.ldt-marco-data {
+  display: inline-block;
+
+  margin-bottom: 14px;
+  padding: 8px 14px;
+
+  background: #ebddcc;
+  color: #b65a1e;
+
+  border-radius: 30px;
+
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ldt-marco-card h4 {
+  margin-bottom: 12px;
+
+  color: #642435;
+  font-family: "TanParadiso", sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.4;
+}
+
+.ldt-marco-card p {
+  color: #222222;
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* CARD DE DESTAQUE */
+
+.ldt-marco-destaque .ldt-marco-card {
+  background: #455543;
+  border-top-color: #edbf8d;
+}
+
+.ldt-marco-destaque .ldt-marco-data {
+  background: #b65a1e;
+  color: #ffffff;
+}
+
+.ldt-marco-destaque .ldt-marco-card h4,
+.ldt-marco-destaque .ldt-marco-card p {
+  color: #ebddcc;
+}
+
+/* ==================================================
+   PRÓXIMOS PASSOS
+================================================== */
+
+.ldt-futuro {
+  width: 100%;
+  padding: 90px 30px;
+
+  background: #ebddcc;
+  text-align: center;
+}
+
+.ldt-futuro-conteudo {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.ldt-futuro-grade {
+  width: 100%;
+  margin-top: 45px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.ldt-futuro-card {
+  min-height: 150px;
+  padding: 25px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  color: #642435;
+
+  border-bottom: 6px solid #b65a1e;
+  border-radius: 16px;
+
+  font-family: "AristotelicaPro", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ldt-futuro-card:hover {
+  background: #455543;
+  color: #ebddcc;
+  transform: translateY(-7px);
+}
+
+/* ==================================================
+   ANIMAÇÃO EXCLUSIVA
+================================================== */
+
+.ldt-revelar {
+  opacity: 0;
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.ldt-revelar.ldt-visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
