@@ -52,10 +52,6 @@
 
         <div class="recria-hero-conteudo">
 
-            <span class="recria-programa">
-                PROGRAMA ECOLAB
-            </span>
-
             <h1>
                 ReCria
                 <span>Salgueiro</span>
@@ -909,12 +905,12 @@
 
                  <button
                 class="recria-video-card"
-                data-video="videos/recria-video-1.mp4"
+                data-video="imagem/Galeria-Recria/recria05.MOV"
                 aria-label="Assistir ao vídeo do ReCria Salgueiro"
             >
 
                 <video
-                    src="imagem/Galeria-ReCria/recria05.MOV"
+                    src="imagem/Galeria-Recria/recria05.MOV"
                     preload="metadata"
                     muted
                 ></video>
@@ -935,7 +931,7 @@
 
              <button
                 class="recria-video-card"
-                data-video="videos/recria-video-1.mp4"
+                data-video="imagem/Galeria-Recria/recria06.MOV"
                 aria-label="Assistir ao vídeo do ReCria Salgueiro"
             >
 
@@ -1004,34 +1000,60 @@
     </section>
 
 
-    <!-- =====================================================
-         LIGHTBOX
-    ====================================================== -->
-
-    <div
-        class="recria-lightbox"
-        id="recriaLightbox"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Visualização ampliada da fotografia"
-    >
-
-        <button
-            class="recria-lightbox-fechar"
-            id="recriaLightboxFechar"
-            aria-label="Fechar fotografia"
-        >
-            ×
-        </button>
-
-        <img
-            id="recriaLightboxImagem"
-            src=""
-            alt="Fotografia ampliada do ReCria Salgueiro"
-        >
-
-    </div>
    
+<!-- LIGHTBOX DAS FOTOS -->
+<div
+    class="recria-lightbox"
+    id="recriaLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Fotografia ampliada"
+>
+    <button
+        type="button"
+        class="recria-lightbox-fechar"
+        id="recriaLightboxFechar"
+        aria-label="Fechar fotografia"
+    >
+        &times;
+    </button>
+
+    <img
+        id="recriaLightboxImagem"
+        alt="Fotografia ampliada"
+    >
+</div>
+
+<!-- LIGHTBOX DOS VÍDEOS -->
+<div
+    class="recria-video-lightbox"
+    id="recriaVideoLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vídeo ampliado"
+>
+    <button
+        type="button"
+        class="recria-video-fechar"
+        id="recriaVideoFechar"
+        aria-label="Fechar vídeo"
+    >
+        &times;
+    </button>
+
+    <div class="recria-video-player">
+        <video
+            id="recriaVideoPlayer"
+            controls
+            playsinline
+        ></video>
+    </div>
+</div>
+
+<script src="recria.js"></script>
+</body>
+</html>
+
 
     <section class="section-faixa">
            <div class="faixa-logo animar">

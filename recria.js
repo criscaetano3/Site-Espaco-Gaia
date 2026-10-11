@@ -1,152 +1,141 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* =====================================================
-       LIGHTBOX DAS FOTOS
-    ====================================================== */
-
+  // ELEMENTOS DAS FOTOS
   const fotos = document.querySelectorAll(".recria-foto");
-
-  const lightbox = document.getElementById("recriaLightbox");
-
-  const lightboxImagem = document.getElementById("recriaLightboxImagem");
-
+  const lightboxFoto = document.getElementById("recriaLightbox");
+  const imagemAmpliada = document.getElementById("recriaLightboxImagem");
   const fecharFoto = document.getElementById("recriaLightboxFechar");
 
-  fotos.forEach((foto) => {
-    foto.addEventListener("click", () => {
-      const imagem = foto.getAttribute("data-img");
-
-      if (!imagem) {
-        return;
-      }
-
-      lightboxImagem.src = imagem;
-
-      lightbox.classList.add("ativo");
-
-      document.body.style.overflow = "hidden";
-    });
-  });
-
-  function fecharLightboxFoto() {
-    lightbox.classList.remove("ativo");
-
-    document.body.style.overflow = "";
-
-    setTimeout(() => {
-      lightboxImagem.src = "";
-    }, 300);
-  }
-
-  if (fecharFoto) {
-    fecharFoto.addEventListener("click", fecharLightboxFoto);
-  }
-
-  if (lightbox) {
-    lightbox.addEventListener("click", (evento) => {
-      if (evento.target === lightbox) {
-        fecharLightboxFoto();
-      }
-    });
-  }
-
-  /* =====================================================
-       LIGHTBOX DOS VÍDEOS
-    ====================================================== */
-
+  // ELEMENTOS DOS VÍDEOS
   const videos = document.querySelectorAll(".recria-video-card");
-
-  const videoLightbox = document.getElementById("recriaVideoLightbox");
-
-  const videoPlayer = document.getElementById("recriaVideoPlayer");
-
+  const lightboxVideo = document.getElementById("recriaVideoLightbox");
+  const player = document.getElementById("recriaVideoPlayer");
   const fecharVideo = document.getElementById("recriaVideoFechar");
 
-  videos.forEach((videoCard) => {
-    videoCard.addEventListener("click", () => {
-      const caminhoVideo = videoCard.getAttribute("data-video");
+  let botaoAnterior = null;
 
-      if (!caminhoVideo) {
-        return;
-      }
+  // CONTROLE DA ROLAGEM
+  function atualizarRolagem() {
+    const fotoAberta = lightboxFoto?.classList.contains("ativo");
+    const videoAberto = lightboxVideo?.classList.contains("ativo");
 
-      videoPlayer.src = caminhoVideo;
+    document.body.style.overflow = fotoAberta || videoAberto ? "hidden" : "";
+  }
 
-      videoLightbox.classList.add("ativo");
+  // ABRIR FOTOS
+  if (lightboxFoto && imagemAmpliada) {
+    fotos.forEach((foto) => {
+      foto.addEventListener("click", () => {
+        const caminho =
+          foto.dataset.img || foto.querySelector("img")?.getAttribute("src");
 
-      document.body.style.overflow = "hidden";
+        if (!caminho) return;
 
-      videoPlayer.play().catch(() => {
-        console.log("O navegador aguardou o usuário iniciar o vídeo.");
+        botaoAnterior = foto;
+        imagemAmpliada.src = caminho;
+        imagemAmpliada.alt = foto.querySelector("img")?.alt || "Foto do ReCria";
+
+        lightboxFoto.classList.add("ativo");
+        atualizarRolagem();
+        fecharFoto?.focus();
       });
     });
+  }
+
+  // FECHAR FOTOS
+  function fecharLightboxFoto() {
+    if (!lightboxFoto) return;
+
+    lightboxFoto.classList.remove("ativo");
+    atualizarRolagem();
+
+    if (imagemAmpliada) {
+      imagemAmpliada.removeAttribute("src");
+    }
+
+    botaoAnterior?.focus();
+  }
+
+  fecharFoto?.addEventListener("click", fecharLightboxFoto);
+
+  lightboxFoto?.addEventListener("click", (evento) => {
+    if (evento.target === lightboxFoto) {
+      fecharLightboxFoto();
+    }
   });
 
-  function fecharLightboxVideo() {
-    videoPlayer.pause();
+  // ABRIR VÍDEOS
+  if (lightboxVideo && player) {
+    videos.forEach((card) => {
+      card.addEventListener("click", () => {
+        const caminho = card.dataset.video;
 
-    videoPlayer.currentTime = 0;
+        if (!caminho) return;
 
-    videoPlayer.removeAttribute("src");
+        botaoAnterior = card;
+        player.src = caminho;
+        player.load();
 
-    videoPlayer.load();
+        lightboxVideo.classList.add("ativo");
+        atualizarRolagem();
+        fecharVideo?.focus();
 
-    videoLightbox.classList.remove("ativo");
-
-    document.body.style.overflow = "";
-  }
-
-  if (fecharVideo) {
-    fecharVideo.addEventListener("click", fecharLightboxVideo);
-  }
-
-  if (videoLightbox) {
-    videoLightbox.addEventListener("click", (evento) => {
-      if (evento.target === videoLightbox) {
-        fecharLightboxVideo();
-      }
+        player.play().catch(() => {
+          console.log("Clique no play para reproduzir.");
+        });
+      });
     });
   }
 
-  /* =====================================================
-       TECLA ESC
-    ====================================================== */
+  // FECHAR VÍDEOS
+  function fecharLightboxVideo() {
+    if (!lightboxVideo) return;
 
-  document.addEventListener("keydown", (evento) => {
-    if (evento.key !== "Escape") {
-      return;
+    player?.pause();
+
+    if (player) {
+      player.removeAttribute("src");
+      player.load();
     }
 
-    if (lightbox && lightbox.classList.contains("ativo")) {
-      fecharLightboxFoto();
-    }
+    lightboxVideo.classList.remove("ativo");
+    atualizarRolagem();
+    botaoAnterior?.focus();
+  }
 
-    if (videoLightbox && videoLightbox.classList.contains("ativo")) {
+  fecharVideo?.addEventListener("click", fecharLightboxVideo);
+
+  lightboxVideo?.addEventListener("click", (evento) => {
+    if (evento.target === lightboxVideo) {
       fecharLightboxVideo();
     }
   });
 
-  /* =====================================================
-       SCROLL SUAVE
-    ====================================================== */
+  // FECHAR COM ESC
+  document.addEventListener("keydown", (evento) => {
+    if (evento.key !== "Escape") return;
 
-  const linksInternos = document.querySelectorAll('a[href^="#"]');
+    if (lightboxFoto?.classList.contains("ativo")) {
+      fecharLightboxFoto();
+    }
 
-  linksInternos.forEach((link) => {
+    if (lightboxVideo?.classList.contains("ativo")) {
+      fecharLightboxVideo();
+    }
+  });
+
+  // ROLAGEM SUAVE
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (evento) => {
       const id = link.getAttribute("href");
 
-      if (!id || id === "#") {
-        return;
-      }
+      if (!id || id === "#") return;
 
-      const destino = document.querySelector(id);
+      const destino = document.getElementById(id.slice(1));
 
       if (destino) {
         evento.preventDefault();
-
         destino.scrollIntoView({
           behavior: "smooth",
-
           block: "start",
         });
       }

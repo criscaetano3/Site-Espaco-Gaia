@@ -1,6 +1,5 @@
 /* =========================================================
-   RECRIA SALGUEIRO
-   CSS PRINCIPAL
+   RECRIA SALGUEIRO CSS
 ========================================================= */
 
 /* =========================================================
@@ -139,8 +138,8 @@ button {
   font-size: clamp(2.4rem, 4vw, 4.2rem);
 
   font-weight: normal;
-
-  line-height: 1.08;
+  line-height: 130px;
+  letter-spacing: 4px;
 
   color: var(--recria-verde-escuro);
 }
@@ -149,6 +148,7 @@ button {
 .recria-sobre h2 span,
 .recria-economia h2 span {
   color: var(--recria-laranja);
+  line-height: 80px;
 }
 
 .recria-titulo-central > p {
@@ -183,7 +183,6 @@ button {
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease,
     color 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -284,13 +283,15 @@ button {
 
   font-weight: normal;
 
-  line-height: 0.85;
+  letter-spacing: 4px;
 }
 
 .recria-hero h1 span {
   display: block;
 
   color: var(--recria-amarelo);
+  line-height: 200px;
+  letter-spacing: 4px;
 }
 
 .recria-hero p {
@@ -1012,9 +1013,7 @@ button {
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .recria-video-card:hover .recria-play {
@@ -1027,92 +1026,79 @@ button {
    LIGHTBOX VÍDEO
 ========================================================= */
 
+.recria-lightbox,
 .recria-video-lightbox {
   position: fixed;
-
   inset: 0;
-
-  z-index: 10000;
+  z-index: 99999;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  padding: 40px;
-
+  padding: 20px;
   background: rgba(0, 0, 0, 0.94);
 
   opacity: 0;
   visibility: hidden;
-
   pointer-events: none;
 
   transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
+.recria-lightbox.ativo,
 .recria-video-lightbox.ativo {
   opacity: 1;
   visibility: visible;
-
   pointer-events: auto;
 }
 
-.recria-video-player {
-  width: min(1000px, 90vw);
-
+.recria-lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95vw;
   max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.recria-video-player {
+  width: min(1000px, 95vw);
 }
 
 .recria-video-player video {
   display: block;
-
   width: 100%;
-
   max-height: 85vh;
-
-  border-radius: 15px;
-
-  background: black;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: #000;
+  border-radius: 12px;
 }
 
-/* FECHAR VÍDEO */
-
+.recria-lightbox-fechar,
 .recria-video-fechar {
   position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 10;
 
-  top: 20px;
-  right: 30px;
+  width: 48px;
+  height: 48px;
 
-  z-index: 5;
-
-  width: 50px;
-  height: 50px;
-
-  display: grid;
-  place-items: center;
-
+  border: 0;
   border-radius: 50%;
+  background: #fff;
+  color: #31451f;
 
-  background: rgba(255, 255, 255, 0.12);
-
-  color: white;
-
-  font-size: 2.3rem;
-
+  font-size: 32px;
   cursor: pointer;
-
-  transition: 0.3s ease;
 }
 
-.recria-video-fechar:hover {
-  transform: rotate(90deg);
-
-  background: var(--recria-laranja);
+.recria-foto,
+.recria-video-card {
+  cursor: pointer;
 }
 
 /* =========================================================
@@ -1173,7 +1159,8 @@ button {
   font-size: 0.78rem;
   font-weight: 700;
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  line-height: 80px;
 }
 
 .recria-cta h2 {
@@ -1187,13 +1174,16 @@ button {
 
   font-weight: normal;
 
-  line-height: 1.08;
+  line-height: 100px;
+  letter-spacing: 4px;
 }
 
 .recria-cta h2 strong {
   color: var(--recria-amarelo);
 
   font-weight: normal;
+  line-height: 100px;
+  letter-spacing: 4px;
 }
 
 .recria-cta p {
